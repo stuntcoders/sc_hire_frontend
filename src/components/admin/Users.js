@@ -18,7 +18,7 @@ export default function Users() {
           <span className="cursor-pointer">
             Admin
           </span>
-          <span className="inline-flex self-center w-20 h-0.5 ml-2 mt-2 bg-indigo-500"></span>
+          <span className="inline-flex self-center w-16 h-0.5 ml-2 mt-2 bg-indigo-500"></span>
         </li>
         <li className={ `flex items-end ${tab === 1 ? "text-3xl" : "text-2xl text-gray-400"}` }
             onClick={() => showTab(1)}
