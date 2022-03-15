@@ -1,3 +1,5 @@
+import logo from "../assets/images/logo.jpeg";
+
 export default function Login() {
   return (
     <>
@@ -7,8 +9,8 @@ export default function Login() {
             <div>
               <img
                 className="h-12 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt="Workflow"
+                src={logo}
+                alt="Stuntcoders"
               />
               <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
             </div>

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import logo from "../assets/images/logo.jpeg";
+
 export default function NotFound() {
   return (
     <div className="bg-white min-h-screen flex flex-col lg:relative">
@@ -8,10 +10,10 @@ export default function NotFound() {
           <div className="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">
             <div className="flex-shrink-0 pt-10 sm:pt-16">
               <a href="/" className="inline-flex">
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">Stuntcoders</span>
                 <img
                   className="h-12 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                  src={logo}
                   alt=""
                 />
               </a>
