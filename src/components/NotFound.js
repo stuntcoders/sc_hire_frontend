@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-import logo from "../assets/images/logo.jpeg";
+import logo from "../assets/images/logo.jpeg"
 
 export default function NotFound() {
   return (
