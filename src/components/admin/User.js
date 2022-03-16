@@ -1,6 +1,6 @@
 import useCard from "../../hooks/useCard";
 
-import UserDetails from "./UserDetails";
+import UserForm from "./UserForm";
 
 import { KeyIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
@@ -44,7 +44,7 @@ export default function User({ user, className }) {
           </div>
         </div>
 
-        { itemCardOpen ? <UserDetails user={user} /> : <></> }
+        { itemCardOpen ? <UserForm user={user} /> : <></> }
       </a>
     </li>
   )

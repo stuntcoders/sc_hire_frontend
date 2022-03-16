@@ -1,7 +1,7 @@
 import useCard from "../../hooks/useCard";
 
 import { ChevronRightIcon } from "@heroicons/react/outline"
-import UserDetails from "./UserDetails";
+import UserForm from "./UserForm";
 
 export default function NewUser({ type }) {
   const [itemCardOpen, toggleCard] = useCard()
@@ -16,7 +16,7 @@ export default function NewUser({ type }) {
         <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
       </span>
 
-      { itemCardOpen ? <UserDetails user={{}} /> : <></> }
+      { itemCardOpen ? <UserForm user={{}} /> : <></> }
     </div>
   )
 }
