@@ -63,7 +63,7 @@ export default function Users() {
       </section>
 
       <section className="bg-white shadow overflow-hidden rounded my-6">
-        <ul className="divide-y divide-gray-200">
+        <ul className="divide-y divide-gray-100 dark:divide-gray-200">
           {users.map((user) => (
             user.role === "admin" ?
               <User user={user} key={user.id} className={tab === 0 ? "block" : "hidden"} /> :
