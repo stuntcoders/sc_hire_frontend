@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import ShowUsers from "./ShowUsers"
+import User from "./User";
 
 export default function Users() {
   const [tab, setTabState] = useState(0);
@@ -8,6 +9,33 @@ export default function Users() {
   const showTab = index => {
     setTabState(index);
   };
+
+  let users = [
+    {
+      "id": 1,
+      "first_name": "John",
+      "last_name": "Smith",
+      "email": "john_smith@fake.com",
+      "password": "c5ba039c317364219207a0c3da2189",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane_smith@fake.com",
+      "password": "7c5ba039c31364219207a0c3da2189",
+      "role": "candidate"
+    },
+    {
+      "id": 3,
+      "first_name": "Sarah",
+      "last_name": "Key",
+      "email": "sarah_key@fake.com",
+      "password": "da2187c5ba039c31364219207a0c39",
+      "role": "candidate"
+    },
+  ]
 
   return (
     <>
@@ -29,10 +57,20 @@ export default function Users() {
         </li>
       </ul>
 
-      <div>
+      <section>
         <ShowUsers type="Admin" className={tab === 0 ? "block" : "hidden"} />
         <ShowUsers type="Candidate" className={tab === 1 ? "block" : "hidden"} />
-      </div>
+      </section>
+
+      <section className="bg-white shadow overflow-hidden rounded my-6">
+        <ul className="divide-y divide-gray-200">
+          {users.map((user) => (
+            user.role === "admin" ?
+              <User user={user} key={user.id} className={tab === 0 ? "block" : "hidden"} /> :
+              <User user={user} key={user.id} className={tab === 1 ? "block" : "hidden"} />
+          ))}
+        </ul>
+      </section>
     </>
   );
 }
