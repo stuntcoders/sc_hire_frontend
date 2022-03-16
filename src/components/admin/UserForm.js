@@ -1,25 +1,21 @@
-import { useState } from "react";
+import useCard from "../../hooks/useCard";
 
 import { ChevronUpIcon } from "@heroicons/react/solid"
 
 export default function UserForm({ type }) {
-  const [form, setFormState] = useState(false);
-
-  const toggleForm = () => {
-    setFormState(!form);
-  };
+  const [itemCardOpen, toggleCard] = useCard()
 
   return(
-    <div className={`relative bg-gray-100 rounded overflow-hidden ${form ? "px-4 py-6 md:px-6 md:py-0 md:pb-6" : "px-4"}`}>
-      <h2 className={`relative text-xl z-10 ${form ? "text-center py-4 md:py-6" : "py-2"}`}>
+    <div className={`relative bg-gray-100 rounded overflow-hidden ${itemCardOpen ? "px-4 py-6 md:px-6 md:py-0 md:pb-6" : "px-4"}`}>
+      <h2 className={`relative text-xl z-10 ${itemCardOpen ? "text-center py-4 md:py-6" : "py-2"}`}>
         Create {type}
       </h2>
       <div className="absolute -top-1 -right-64 md:-right-36 w-[36rem] h-96 bg-indigo-500 rotate-[112deg] transform"></div>
-      <span onClick={() => toggleForm()} className="absolute top-2 right-4 text-gray-900 hover:text-white cursor-pointer z-10">
+      <span onClick={() => toggleCard()} className="absolute top-2 right-4 text-gray-900 hover:text-white cursor-pointer z-10">
         <ChevronUpIcon className="h-7 w-7 pointer-events-none"/>
       </span>
 
-      { form ? <form action="#" method="POST" className="relative md:max-w-xl mx-auto space-y-6 z-10">
+      { itemCardOpen ? <form action="#" method="POST" className="relative md:max-w-xl mx-auto space-y-6 z-10">
           <div>
             <label htmlFor={`email${type}`} className="block text-sm font-medium text-gray-700">
               {type} Email
