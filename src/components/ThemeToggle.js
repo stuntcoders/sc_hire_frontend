@@ -1,5 +1,4 @@
-import { SunIcon } from "@heroicons/react/outline"
-import { MoonIcon } from "@heroicons/react/outline"
+import { SunIcon, MoonIcon } from "@heroicons/react/outline"
 
 export default function ThemeToggle({ theme, setTheme }) {
   return (
