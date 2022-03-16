@@ -4,46 +4,46 @@ import logo from "../assets/images/logo.jpeg"
 
 export default function NotFound() {
   return (
-    <div className="bg-white min-h-screen flex flex-col lg:relative">
+    <div className="min-h-screen flex flex-col lg:relative">
       <div className="flex-grow flex flex-col">
-        <main className="flex-grow flex flex-col bg-white">
+        <main className="flex-grow flex flex-col bg-white dark:bg-gray-800">
           <div className="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">
             <div className="flex-shrink-0 pt-10 sm:pt-16">
               <a href="/" className="inline-flex">
                 <span className="sr-only">Stuntcoders</span>
                 <img
-                  className="h-12 w-auto"
+                  className="h-12 w-auto rounded"
                   src={logo}
                   alt=""
                 />
               </a>
             </div>
             <div className="flex-shrink-0 my-auto py-16 sm:py-32">
-              <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">404 error</p>
-              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+              <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-500 uppercase tracking-wide">404 error</p>
+              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight sm:text-5xl">
                 Page not found
               </h1>
-              <p className="mt-2 text-base text-gray-500">Sorry, we couldn’t find the page you’re looking for.</p>
+              <p className="mt-2 text-base text-gray-500 dark:text-gray-400">Sorry, we couldn’t find the page you’re looking for.</p>
               <div className="mt-6">
-              <Link to={{ pathname: "/" }}>
+              <Link to={{ pathname: "/" }} className="text-lg font-medium dark:text-indigo-500 dark:hover:text-indigo-400">
                 Go back home
               </ Link>
               </div>
             </div>
           </div>
         </main>
-        <footer className="flex-shrink-0 bg-gray-50">
+        <footer className="flex-shrink-0 bg-gray-50 dark:bg-gray-700">
           <div className="mx-auto max-w-7xl w-full px-4 py-16 sm:px-6 lg:px-8">
             <nav className="flex space-x-4">
-              <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">
+              <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
                 Contact Support
               </a>
-              <span className="inline-block border-l border-gray-300" aria-hidden="true" />
-              <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">
+              <span className="inline-block border-l border-gray-300 dark:border-gray-500" aria-hidden="true" />
+              <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
                 Status
               </a>
-              <span className="inline-block border-l border-gray-300" aria-hidden="true" />
-              <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">
+              <span className="inline-block border-l border-gray-300 dark:border-gray-500" aria-hidden="true" />
+              <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
                 Twitter
               </a>
             </nav>
