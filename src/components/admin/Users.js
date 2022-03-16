@@ -12,7 +12,7 @@ export default function Users() {
   return (
     <>
       <ul className="flex mb-2 space-x-2">
-        <li className={ `flex items-end ${tab === 0 ? "text-3xl" : "text-2xl text-gray-400"}` }
+        <li className={ `flex items-end ${tab === 0 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
             onClick={() => showTab(0)}
         >
           <span className="cursor-pointer">
@@ -20,7 +20,7 @@ export default function Users() {
           </span>
           <span className="inline-flex self-center w-16 h-0.5 ml-2 mt-2 bg-indigo-500"></span>
         </li>
-        <li className={ `flex items-end ${tab === 1 ? "text-3xl" : "text-2xl text-gray-400"}` }
+        <li className={ `flex items-end ${tab === 1 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
             onClick={() => showTab(1)}
         >
           <span className="cursor-pointer">

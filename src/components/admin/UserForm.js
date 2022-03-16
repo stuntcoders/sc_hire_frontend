@@ -6,7 +6,7 @@ export default function UserForm({ type }) {
   const [itemCardOpen, toggleCard] = useCard()
 
   return(
-    <div className={`relative bg-gray-100 rounded overflow-hidden ${itemCardOpen ? "px-4 py-6 md:px-6 md:py-0 md:pb-6" : "px-4"}`}>
+    <div className={`relative bg-gray-50 dark:bg-white rounded overflow-hidden drop-shadow-sm ${itemCardOpen ? "px-4 py-6 md:px-6 md:py-0 md:pb-6" : "px-4"}`}>
       <h2 className={`relative text-xl z-10 ${itemCardOpen ? "text-center py-4 md:py-6" : "py-2"}`}>
         Create {type}
       </h2>
