@@ -1,6 +1,6 @@
 import useCard from "../../hooks/useCard";
 
-import { ChevronUpIcon } from "@heroicons/react/solid"
+import { ChevronUpIcon } from "@heroicons/react/outline"
 
 export default function UserForm({ type }) {
   const [itemCardOpen, toggleCard] = useCard()
@@ -11,8 +11,8 @@ export default function UserForm({ type }) {
         Create {type}
       </h2>
       <div className="absolute -top-1 -right-64 md:-right-36 w-[36rem] h-96 bg-indigo-500 rotate-[112deg] transform"></div>
-      <span onClick={() => toggleCard()} className="absolute top-2 right-4 text-gray-900 hover:text-white cursor-pointer z-10">
-        <ChevronUpIcon className="h-7 w-7 pointer-events-none"/>
+      <span onClick={() => toggleCard()} className="absolute top-3 right-4 text-gray-800 hover:text-white cursor-pointer z-10">
+        <ChevronUpIcon className="h-5 w-5 pointer-events-none"/>
       </span>
 
       { itemCardOpen ? <form action="#" method="POST" className="relative md:max-w-xl mx-auto space-y-6 z-10">
