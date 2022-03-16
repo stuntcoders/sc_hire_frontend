@@ -11,7 +11,7 @@ export default function UserForm({ type }) {
         Create {type}
       </h2>
       <div className="absolute -top-1 -right-64 md:-right-36 w-[36rem] h-96 bg-green-200 rotate-[112deg] transform"></div>
-      <span onClick={() => toggleCard()} className="absolute top-3 right-4 text-gray-500 hover:text-white cursor-pointer z-10">
+      <span onClick={() => toggleCard()} className="absolute top-3 right-6 text-gray-400 hover:text-white cursor-pointer z-10">
         <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
       </span>
 

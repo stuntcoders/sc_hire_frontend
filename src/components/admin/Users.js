@@ -62,7 +62,7 @@ export default function Users() {
         <ShowUsers type="Candidate" className={tab === 1 ? "block" : "hidden"} />
       </section>
 
-      <section className="bg-white shadow overflow-hidden rounded my-6">
+      <section className="relative bg-white shadow overflow-hidden rounded my-6 z-10">
         <ul className="divide-y divide-gray-100 dark:divide-gray-200">
           {users.map((user) => (
             user.role === "admin" ?

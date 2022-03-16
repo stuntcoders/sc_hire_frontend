@@ -9,7 +9,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <Outlet />
       </div>
-      <svg class="absolute -bottom-20 -right-96 transform -rotate-[60deg]" width="700" height="400" fill="none" viewBox="0 0 784 404">
+      <svg class="absolute -bottom-20 -right-96 transform -rotate-[60deg] z-0" width="700" height="400" fill="none" viewBox="0 0 784 404">
         <defs>
           <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
             <rect class="text-gray-100 dark:text-gray-900" x="0" y="0" width="4" height="4" fill="currentColor"></rect>
