@@ -1,9 +1,15 @@
+import useCard from "../../hooks/useCard";
+
+import UserDetails from "./UserDetails";
+
 import { KeyIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
 export default function User({ user, className }) {
+  const [itemCardOpen, toggleCard] = useCard()
+
   return (
     <li key={user.id} className={className}>
-      <a href="#" className="block bg-gray-50 dark:bg-white hover:bg-white dark:hover:bg-gray-50">
+      <a href="#" className={`block bg-gray-50 dark:bg-white cursor-default ${itemCardOpen ? "pb-4" : ""}`}>
         <div className="px-4 py-4 flex items-center sm:px-6">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
             <div className="truncate">
@@ -24,16 +30,21 @@ export default function User({ user, className }) {
                 </div>
               </div>
             </div>
-            <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
-              <div className="flex overflow-hidden -space-x-1">
-                <span className="text-indigo-600 text-sm">{user.role}</span>
-              </div>
-            </div>
+            { itemCardOpen ?
+                <></> :
+                <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
+                  <div className="flex overflow-hidden -space-x-1">
+                    <span className="text-indigo-600 text-sm">{user.role}</span>
+                  </div>
+                </div>
+            }
           </div>
-          <div className="ml-5 flex-shrink-0">
-            <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+          <div onClick={() => toggleCard()} className="ml-5 flex-shrink-0 cursor-pointer">
+            <ChevronRightIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
           </div>
         </div>
+
+        { itemCardOpen ? <UserDetails user={user} /> : <></> }
       </a>
     </li>
   )
