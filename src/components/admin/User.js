@@ -15,7 +15,7 @@ export default function User({ user, className }) {
             <div className="truncate">
               <div className="flex text-sm">
                 <p className="font-medium truncate">{user.first_name}</p>
-                <p className="ml-1 flex-shrink-0 font-medium ">
+                <p className="ml-1 flex-shrink-0 font-medium">
                   {user.last_name}
                 </p>
                 <span className="inline-flex self-center w-10 mt-0.5 mx-1 h-px bg-gray-300"></span>

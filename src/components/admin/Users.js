@@ -1,9 +1,13 @@
 import { useState } from "react";
+import useCard from "../../hooks/useCard";
 
-import ShowUsers from "./ShowUsers"
+import UserForm from "./UserForm";
 import User from "./User";
 
+import { ChevronRightIcon } from "@heroicons/react/outline"
+
 export default function Users() {
+  const [itemCardOpen, toggleCard] = useCard()
   const [tab, setTabState] = useState(0);
 
   const showTab = index => {
@@ -57,9 +61,16 @@ export default function Users() {
         </li>
       </ul>
 
-      <section>
-        <ShowUsers type="Admin" className={tab === 0 ? "block" : "hidden"} />
-        <ShowUsers type="Candidate" className={tab === 1 ? "block" : "hidden"} />
+      <section className={`relative bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10 ${itemCardOpen ? "pb-4" : "px-6"}`}>
+        <h2 className={`relative text-sm font-medium z-10 ${itemCardOpen ? "hidden" : "py-2"}`}>
+          Create user
+        </h2>
+        <div className="absolute -top-1 -right-64 md:-right-36 w-[36rem] h-96 bg-green-200 rotate-[112deg] transform"></div>
+        <span onClick={() => toggleCard()} className={`absolute top-2.5 right-6 text-gray-400 hover:text-white cursor-pointer z-10 ${itemCardOpen ? "hidden" : ""}`}>
+          <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
+        </span>
+
+        { itemCardOpen ? <UserForm user={{}} toggleCard={toggleCard} /> : <></> }
       </section>
 
       <section className="relative bg-white shadow overflow-hidden rounded my-6 z-10">

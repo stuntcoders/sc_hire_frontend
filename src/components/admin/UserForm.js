@@ -1,4 +1,4 @@
-export default function UserForm({ user }) {
+export default function UserForm({ user, toggleCard }) {
   return (
     <div className="relative bg-white dark:bg-gray-50 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10">
       <div className="md:grid md:grid-cols-3 md:gap-6">
@@ -75,6 +75,15 @@ export default function UserForm({ user }) {
                 </div>
             </div>
             <div className="px-4 pt-3 text-right sm:px-6">
+              { user.id ? "" :
+                <button
+                  onClick={() => toggleCard()}
+                  type="submit"
+                  className="inline-flex justify-center py-2 px-4 mr-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-300 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Cancel
+                </button>
+              }
               <button
                 type="submit"
                 className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
