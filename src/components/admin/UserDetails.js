@@ -1,9 +1,9 @@
 export default function UserDetails({ user }) {
   return (
-    <div className="bg-white dark:bg-gray-50 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6">
+    <div className="relative bg-white dark:bg-gray-50 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10">
       <div className="md:grid md:grid-cols-3 md:gap-6">
         <div className="md:col-span-1">
-          <h3 className="text-lg font-medium leading-6 text-gray-900">Edit User</h3>
+          <h3 className="text-lg font-medium leading-6 text-gray-900">{ user.id ? "Edit" : "Create"} User</h3>
           <p className="mt-1 text-sm text-gray-500">{user.role}</p>
         </div>
         <div className="mt-5 md:mt-0 md:col-span-2">

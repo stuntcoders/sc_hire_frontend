@@ -1,9 +1,9 @@
-import UserForm from "./UserForm"
+import NewUser from "./NewUser"
 
-export default function CandidateUsers({ type, className }) {
+export default function ShowUsers({ type, className }) {
   return(
     <div className={`${className}`}>
-      <UserForm type={type} />
+      <NewUser type={type} />
     </div>
   )
 }
