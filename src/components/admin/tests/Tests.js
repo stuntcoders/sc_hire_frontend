@@ -34,7 +34,7 @@ export default function Tests() {
         <h2 className={`relative text-sm font-medium z-10 ${itemCardOpen ? "hidden" : "py-2"}`}>
           Create test
         </h2>
-        <Polygon fill="#bbf7d0" className="absolute right-0" />
+        <Polygon fill="#bbf7d0" className="absolute top-0 right-0" />
         <span onClick={() => toggleCard()} className={`absolute top-2.5 right-6 text-gray-400 hover:text-white cursor-pointer z-10 ${itemCardOpen ? "hidden" : ""}`}>
           <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
         </span>
