@@ -1,8 +1,8 @@
-import useCard from "../../../hooks/useCard";
+import useCard from "../../../hooks/useCard"
 
-import UserForm from "./UserForm";
+import UserForm from "./UserForm"
 
-import { KeyIcon, ChevronRightIcon } from '@heroicons/react/outline'
+import { KeyIcon, ChevronRightIcon } from "@heroicons/react/outline"
 
 export default function User({ user, className }) {
   const [itemCardOpen, toggleCard] = useCard()
