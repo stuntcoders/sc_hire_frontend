@@ -2,7 +2,7 @@ import useCard from "../../../hooks/useCard"
 
 import UserForm from "./UserForm"
 
-import { KeyIcon, ChevronRightIcon } from "@heroicons/react/outline"
+import { KeyIcon, ChevronUpIcon } from "@heroicons/react/outline"
 
 export default function User({ user, className }) {
   const [itemCardOpen, toggleCard] = useCard()
@@ -40,7 +40,7 @@ export default function User({ user, className }) {
             }
           </div>
           <div onClick={() => toggleCard()} className="ml-5 flex-shrink-0 cursor-pointer">
-            <ChevronRightIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
+            <ChevronUpIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
           </div>
         </div>
 
