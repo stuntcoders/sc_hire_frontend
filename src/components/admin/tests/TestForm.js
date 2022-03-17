@@ -1,9 +1,9 @@
-import { ReactComponent as Polygon } from "../../../assets/shapes/polygon.svg"
+import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
 
 export default function TestForm({ test }) {
   return (
     <section className="relative block pt-1 pb-4 bg-gray-50 dark:bg-white rounded overflow-hidden">
-      <Polygon fill="#bbf7d0" className="absolute top-0 right-0" />
+      <PolygonRight fill="#bbf7d0" className="absolute top-0 right-0" />
 
       <div className="relative bg-white dark:bg-gray-50 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10">
         <div className="md:grid md:grid-cols-3 md:gap-6">

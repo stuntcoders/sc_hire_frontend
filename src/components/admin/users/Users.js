@@ -1,14 +1,11 @@
-import useCard from "../../../hooks/useCard";
 import useTab from "../../../hooks/useTab";
 
 import UserForm from "./UserForm";
 import User from "./User";
 
-import { ChevronRightIcon } from "@heroicons/react/outline"
-import { ReactComponent as Polygon } from "../../../assets/shapes/polygon.svg"
+import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
 
 export default function Users() {
-  const [itemCardOpen, toggleCard] = useCard()
   const [itemTabOpen, toggleTab] = useTab()
 
   let users = [
@@ -78,7 +75,7 @@ export default function Users() {
 
       {itemTabOpen === 2 ?
         <section className={`relative pb-4 bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10`}>
-          <Polygon fill="#bbf7d0" className="absolute top-0 right-0" />
+          <PolygonRight fill="#bbf7d0" className="absolute top-0 right-0" />
 
           <UserForm user={{}} />
         </section>
