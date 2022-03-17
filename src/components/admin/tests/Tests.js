@@ -43,7 +43,7 @@ export default function Tests() {
           <span className="cursor-pointer">
             Templates
           </span>
-          <span className={`inline-flex self-center w-16 h-px ml-2 mt-2 ${itemTabOpen === 0 ? "bg-indigo-500" : "bg-gray-600"}`}></span>
+          <span className={`inline-flex self-center w-16 h-px ml-2 mt-2 ${itemTabOpen === 0 ? "bg-indigo-500" : "bg-gray-300 dark:bg-gray-600"}`}></span>
         </li>
         <li className={ `flex items-end ${itemTabOpen === 1 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
             onClick={() => toggleTab(1)}
@@ -51,7 +51,7 @@ export default function Tests() {
           <span className="cursor-pointer">
             Review
           </span>
-          <span className={`inline-flex self-center w-16 h-px ml-2 mt-2 ${itemTabOpen === 1 ? "bg-indigo-500" : "bg-gray-600"}`}></span>
+          <span className={`inline-flex self-center w-16 h-px ml-2 mt-2 ${itemTabOpen === 1 ? "bg-indigo-500" : "bg-gray-300 dark:bg-gray-600"}`}></span>
         </li>
         <li className={ `flex items-end ${itemTabOpen === 2 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
             onClick={() => toggleTab(2)}
