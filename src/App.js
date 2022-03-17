@@ -8,6 +8,7 @@ import NotFound from "./components/NotFound"
 
 import HomeAdmin from "./components/admin/Home"
 import Tests from "./components/admin/tests/Tests"
+import TestDetails from "./components/admin/tests/TestDetails"
 import Users from "./components/admin/users/Users"
 
 import HomeCandidate from "./components/candidate/Home"
@@ -20,8 +21,9 @@ function App() {
       <Routes>
         <Route path="/" element={ <Login/> } />
         <Route path="/admin" element={ <HomeAdmin /> } >
-          <Route path="tests" element={<Tests />} />
-          <Route path="users" element={<Users />} />
+          <Route path="tests" element={ <Tests /> } />
+          <Route path="tests/:id" element={ <TestDetails /> } />
+          <Route path="users" element={ <Users /> } />
         </Route>
         <Route path="/candidate" element={ <HomeCandidate /> } />
         <Route path="*" element={ <NotFound /> } />
