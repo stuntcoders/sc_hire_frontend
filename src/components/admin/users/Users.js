@@ -1,5 +1,5 @@
-import { useState } from "react";
 import useCard from "../../../hooks/useCard";
+import useTab from "../../../hooks/useTab";
 
 import UserForm from "./UserForm";
 import User from "./User";
@@ -8,11 +8,7 @@ import { ChevronRightIcon } from "@heroicons/react/outline"
 
 export default function Users() {
   const [itemCardOpen, toggleCard] = useCard()
-  const [tab, setTabState] = useState(0);
-
-  const showTab = index => {
-    setTabState(index);
-  };
+  const [itemTabOpen, toggleTab] = useTab()
 
   let users = [
     {
@@ -44,16 +40,16 @@ export default function Users() {
   return (
     <>
       <ul className="flex mb-2 space-x-2">
-        <li className={ `flex items-end ${tab === 0 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
-            onClick={() => showTab(0)}
+        <li className={ `flex items-end ${itemTabOpen === 0 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
+            onClick={() => toggleTab(0)}
         >
           <span className="cursor-pointer">
             Admin
           </span>
           <span className="inline-flex self-center w-16 h-px ml-2 mt-2 bg-indigo-500"></span>
         </li>
-        <li className={ `flex items-end ${tab === 1 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
-            onClick={() => showTab(1)}
+        <li className={ `flex items-end ${itemTabOpen === 1 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
+            onClick={() => toggleTab(1)}
         >
           <span className="cursor-pointer">
             Candidates
@@ -77,8 +73,8 @@ export default function Users() {
         <ul className="divide-y divide-gray-100 dark:divide-gray-200">
           {users.map((user) => (
             user.role === "admin" ?
-              <User user={user} key={user.id} className={tab === 0 ? "block" : "hidden"} /> :
-              <User user={user} key={user.id} className={tab === 1 ? "block" : "hidden"} />
+              <User user={user} key={user.id} className={itemTabOpen === 0 ? "block" : "hidden"} /> :
+              <User user={user} key={user.id} className={itemTabOpen === 1 ? "block" : "hidden"} />
           ))}
         </ul>
       </section>
