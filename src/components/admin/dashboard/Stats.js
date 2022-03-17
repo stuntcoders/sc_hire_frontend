@@ -17,7 +17,7 @@ export default function Stats() {
           ))}
         </dl>
       </div>
-      <div className="relative hidden sm:block lg:inset-y-0 lg:right-0 border-t-4 border-indigo-600 shadow z-10">
+      <div className="relative hidden sm:block lg:inset-y-0 lg:right-0 mb-6 border-t-4 border-indigo-600 shadow z-10">
         <img
           className="max-h-80 w-full object-cover rounded-b"
           src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
