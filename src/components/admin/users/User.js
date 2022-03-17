@@ -30,8 +30,7 @@ export default function User({ user, className }) {
                 </div>
               </div>
             </div>
-            { itemCardOpen ?
-                <></> :
+            { itemCardOpen ||
                 <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
                   <div className="flex overflow-hidden -space-x-1">
                     <span className="text-indigo-600 text-sm">{user.role}</span>
@@ -44,7 +43,7 @@ export default function User({ user, className }) {
           </div>
         </div>
 
-        { itemCardOpen ? <UserForm user={user} /> : <></> }
+        { itemCardOpen && <UserForm user={user} /> }
       </div>
     </li>
   )

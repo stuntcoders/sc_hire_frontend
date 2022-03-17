@@ -62,7 +62,7 @@ export default function Tests() {
         </li>
       </ul>
 
-      {itemTabOpen === 0 ?
+      {itemTabOpen === 0 &&
         <>
           <section className="relative bg-white shadow overflow-hidden rounded z-10">
             <ul className="divide-y divide-gray-100 dark:divide-gray-200">
@@ -72,9 +72,9 @@ export default function Tests() {
             </ul>
           </section>
         </>
-        : <></>}
+      }
 
-      {itemTabOpen === 1 ?
+      {itemTabOpen === 1 &&
         <>
           <section className="relative bg-white shadow overflow-hidden rounded z-10">
             <ul className="divide-y divide-gray-100 dark:divide-gray-200">
@@ -84,11 +84,9 @@ export default function Tests() {
             </ul>
           </section>
         </>
-        : <></>}
+      }
 
-      {itemTabOpen === 2 ?
-        <TestForm test={{}} />
-        : <></>}
+      {itemTabOpen === 2 && <TestForm test={{}} />}
     </>
   )
 }

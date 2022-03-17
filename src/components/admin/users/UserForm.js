@@ -3,9 +3,7 @@ import { ReactComponent as PolygonLeft } from "../../../assets/shapes/polygon_le
 export default function UserForm({ user }) {
   return (
     <div className="relative bg-white dark:bg-gray-50 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10 overflow-hidden">
-      {user.id ?
-        <PolygonLeft fill="#4338ca" className="absolute top-0 left-0 hidden md:block" />
-        : <></> }
+      {user.id && <PolygonLeft fill="#4338ca" className="absolute top-0 left-0 hidden md:block" /> }
 
       <div className="relative md:grid md:grid-cols-3 md:gap-6 z-10">
         <div className="md:col-span-1">
