@@ -1,6 +1,13 @@
-import useTab from "../../../hooks/useTab";
+import useCard from "../../../hooks/useCard"
+import useTab from "../../../hooks/useTab"
+
+import TestForm from "./TestForm.js"
+
+import { ChevronRightIcon } from "@heroicons/react/outline"
+import { ReactComponent as Polygon } from "../../../assets/shapes/polygon.svg"
 
 export default function Tests() {
+  const [itemCardOpen, toggleCard] = useCard()
   const [itemTabOpen, toggleTab] = useTab()
 
   return(
@@ -10,7 +17,7 @@ export default function Tests() {
             onClick={() => toggleTab(0)}
         >
           <span className="cursor-pointer">
-            Template
+            Templates
           </span>
           <span className="inline-flex self-center w-16 h-px ml-2 mt-2 bg-indigo-500"></span>
         </li>
@@ -22,6 +29,18 @@ export default function Tests() {
           </span>
         </li>
       </ul>
+
+      <section className={`relative bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10 ${itemCardOpen ? "pb-4" : "px-6"}`}>
+        <h2 className={`relative text-sm font-medium z-10 ${itemCardOpen ? "hidden" : "py-2"}`}>
+          Create test
+        </h2>
+        <Polygon fill="#bbf7d0" className="absolute right-0" />
+        <span onClick={() => toggleCard()} className={`absolute top-2.5 right-6 text-gray-400 hover:text-white cursor-pointer z-10 ${itemCardOpen ? "hidden" : ""}`}>
+          <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
+        </span>
+
+        { itemCardOpen ? <TestForm test={{}} toggleCard={toggleCard} /> : <></> }
+      </section>
     </>
   )
 }
