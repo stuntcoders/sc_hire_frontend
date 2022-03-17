@@ -47,7 +47,7 @@ export default function Users() {
           <span className="cursor-pointer">
             Admin
           </span>
-          <span className="inline-flex self-center w-16 h-px ml-2 mt-2 bg-indigo-500"></span>
+          <span className={`inline-flex self-center w-16 h-px ml-2 mt-2 ${itemTabOpen === 0 ? "bg-gray-600" : "bg-gray-300"}`}></span>
         </li>
         <li className={ `flex items-end ${itemTabOpen === 1 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
             onClick={() => toggleTab(1)}
@@ -55,22 +55,18 @@ export default function Users() {
           <span className="cursor-pointer">
             Candidates
           </span>
+          <span className={`inline-flex self-center w-16 h-px ml-2 mt-2 ${itemTabOpen === 1 ? "bg-gray-600" : "bg-gray-300"}`}></span>
+        </li>
+        <li className={ `flex items-end ${itemTabOpen === 2 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
+            onClick={() => toggleTab(2)}
+        >
+          <span className="cursor-pointer">
+            New User
+          </span>
         </li>
       </ul>
 
-      <section className={`relative bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10 ${itemCardOpen ? "pb-4" : "px-6"}`}>
-        <h2 className={`relative text-sm font-medium z-10 ${itemCardOpen ? "hidden" : "py-2"}`}>
-          Create user
-        </h2>
-        <Polygon fill="#bbf7d0" className="absolute top-0 right-0" />
-        <span onClick={() => toggleCard()} className={`absolute top-2.5 right-6 text-gray-400 hover:text-white cursor-pointer z-10 ${itemCardOpen ? "hidden" : ""}`}>
-          <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
-        </span>
-
-        { itemCardOpen ? <UserForm user={{}} toggleCard={toggleCard} /> : <></> }
-      </section>
-
-      <section className="relative bg-white shadow overflow-hidden rounded my-6 z-10">
+      <section className="relative bg-white shadow overflow-hidden rounded z-10">
         <ul className="divide-y divide-gray-100 dark:divide-gray-200">
           {users.map((user) => (
             user.role === "admin" ?
@@ -79,6 +75,14 @@ export default function Users() {
           ))}
         </ul>
       </section>
+
+      {itemTabOpen === 2 ?
+        <section className={`relative pb-4 bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10`}>
+          <Polygon fill="#bbf7d0" className="absolute top-0 right-0" />
+
+          <UserForm user={{}} />
+        </section>
+        : <></>}
     </>
   );
 }
