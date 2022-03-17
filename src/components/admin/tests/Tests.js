@@ -2,6 +2,7 @@ import useTab from "../../../hooks/useTab"
 
 import Test from "./Test"
 import TestForm from "./TestForm"
+import Review from "./Review"
 
 export default function Tests() {
   const [itemTabOpen, toggleTab] = useTab()
@@ -15,6 +16,21 @@ export default function Tests() {
         {"id": 1},
         {"id": 2}
       ],
+    }
+  ]
+
+  let reviews = [
+    {
+      "id": "7c5ba039c31364219207a0c3da2189",
+      "start": Date.now(),
+      "end": Date.now(),
+      "status": "passed",
+    },
+    {
+      "id": "c5ba039c317364219207a0c3da2189",
+      "start": Date.now(),
+      "end": Date.now(),
+      "status": "failed",
     }
   ]
 
@@ -52,6 +68,18 @@ export default function Tests() {
             <ul className="divide-y divide-gray-100 dark:divide-gray-200">
               {tests.map((test) => (
                 <Test test={test} key={test.id} />
+              ))}
+            </ul>
+          </section>
+        </>
+        : <></>}
+
+      {itemTabOpen === 1 ?
+        <>
+          <section className="relative bg-white shadow overflow-hidden rounded z-10">
+            <ul className="divide-y divide-gray-100 dark:divide-gray-200">
+              {reviews.map((review) => (
+                <Review review={review} key={review.id} />
               ))}
             </ul>
           </section>
