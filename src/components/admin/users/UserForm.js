@@ -4,13 +4,13 @@ export default function UserForm({ user }) {
   return (
     <div className="relative bg-white dark:bg-gray-50 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10 overflow-hidden">
       {user.id ?
-        <PolygonLeft fill="#c7d2fe" className="absolute top-0 left-0" />
+        <PolygonLeft fill="#4338ca" className="absolute top-0 left-0 hidden md:block" />
         : <></> }
 
       <div className="relative md:grid md:grid-cols-3 md:gap-6 z-10">
         <div className="md:col-span-1">
-          <h3 className="text-lg font-medium leading-6 text-gray-900">{ user.id ? "Edit" : "Create"} User</h3>
-          <p className="mt-1 text-sm text-white">{user.role}</p>
+          <h3 className={`text-lg font-medium leading-6 ${user.id ? "md:text-white" : "text-gray-900"}`}>{ user.id ? "Edit" : "Create"} User</h3>
+          {user.id && <p className="mt-1 text-sm md:text-white">{user.role}</p>}
         </div>
         <div className="mt-5 md:mt-0 md:col-span-2">
           <form action="#" method="POST">
