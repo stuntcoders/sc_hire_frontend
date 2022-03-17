@@ -5,7 +5,7 @@ import { CollectionIcon, ChevronRightIcon } from "@heroicons/react/outline"
 export default function Test({ test }) {
   return (
     <li key={test.id}>
-      <div className="block bg-gray-50 dark:bg-white cursor-default">
+      <div className="block bg-gray-50 dark:bg-white">
         <div className="px-4 py-4 flex items-center sm:px-6">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
             <div className="truncate">

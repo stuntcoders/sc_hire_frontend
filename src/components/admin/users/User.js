@@ -9,7 +9,7 @@ export default function User({ user, className }) {
 
   return (
     <li key={user.id} className={className}>
-      <div className={`block bg-gray-50 dark:bg-white cursor-default ${itemCardOpen ? "pb-4" : ""}`}>
+      <div className={`block bg-gray-50 dark:bg-white ${itemCardOpen ? "pb-4" : ""}`}>
         <div className="px-4 py-4 flex items-center sm:px-6">
           <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
             <div className="truncate">
