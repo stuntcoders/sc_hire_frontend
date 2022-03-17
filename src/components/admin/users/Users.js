@@ -5,6 +5,7 @@ import UserForm from "./UserForm";
 import User from "./User";
 
 import { ChevronRightIcon } from "@heroicons/react/outline"
+import { ReactComponent as Polygon } from "../../../assets/shapes/polygon.svg"
 
 export default function Users() {
   const [itemCardOpen, toggleCard] = useCard()
@@ -61,7 +62,7 @@ export default function Users() {
         <h2 className={`relative text-sm font-medium z-10 ${itemCardOpen ? "hidden" : "py-2"}`}>
           Create user
         </h2>
-        <div className="absolute -top-1 -right-64 md:-right-36 w-[36rem] h-96 bg-green-200 rotate-[112deg] transform"></div>
+        <Polygon fill="#bbf7d0" className="absolute right-0" />
         <span onClick={() => toggleCard()} className={`absolute top-2.5 right-6 text-gray-400 hover:text-white cursor-pointer z-10 ${itemCardOpen ? "hidden" : ""}`}>
           <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
         </span>
