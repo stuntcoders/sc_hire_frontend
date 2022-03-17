@@ -2,6 +2,7 @@ import useCard from "../../../hooks/useCard"
 import useTab from "../../../hooks/useTab"
 
 import TestForm from "./TestForm.js"
+import Test from "./Test"
 
 import { ChevronRightIcon } from "@heroicons/react/outline"
 import { ReactComponent as Polygon } from "../../../assets/shapes/polygon.svg"
@@ -9,6 +10,18 @@ import { ReactComponent as Polygon } from "../../../assets/shapes/polygon.svg"
 export default function Tests() {
   const [itemCardOpen, toggleCard] = useCard()
   const [itemTabOpen, toggleTab] = useTab()
+
+  let tests = [
+    {
+      "id": 1,
+      "title": "Front-end General Knowledge",
+      "duration": "45",
+      "questions": [
+        {"id": 1},
+        {"id": 2}
+      ],
+    }
+  ]
 
   return(
     <>
@@ -30,17 +43,29 @@ export default function Tests() {
         </li>
       </ul>
 
-      <section className={`relative bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10 ${itemCardOpen ? "pb-4" : "px-6"}`}>
-        <h2 className={`relative text-sm font-medium z-10 ${itemCardOpen ? "hidden" : "py-2"}`}>
-          Create test
-        </h2>
-        <Polygon fill="#bbf7d0" className="absolute top-0 right-0" />
-        <span onClick={() => toggleCard()} className={`absolute top-2.5 right-6 text-gray-400 hover:text-white cursor-pointer z-10 ${itemCardOpen ? "hidden" : ""}`}>
-          <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
-        </span>
+      {itemTabOpen === 0 ?
+        <>
+          <section className={`relative bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10 ${itemCardOpen ? "pb-4" : "px-6"}`}>
+            <h2 className={`relative text-sm font-medium z-10 ${itemCardOpen ? "hidden" : "py-2"}`}>
+              Create test
+            </h2>
+            <Polygon fill="#bbf7d0" className="absolute top-0 right-0" />
+            <span onClick={() => toggleCard()} className={`absolute top-2.5 right-6 text-gray-400 hover:text-white cursor-pointer z-10 ${itemCardOpen ? "hidden" : ""}`}>
+              <ChevronRightIcon className="h-5 w-5 pointer-events-none"/>
+            </span>
 
-        { itemCardOpen ? <TestForm test={{}} toggleCard={toggleCard} /> : <></> }
-      </section>
+            { itemCardOpen ? <TestForm test={{}} toggleCard={toggleCard} /> : <></> }
+          </section>
+
+          <section className="relative bg-white shadow overflow-hidden rounded my-6 z-10">
+            <ul className="divide-y divide-gray-100 dark:divide-gray-200">
+              {tests.map((test) => (
+                <Test test={test} key={test.id} />
+              ))}
+            </ul>
+          </section>
+        </>
+      : ""}
     </>
   )
 }
