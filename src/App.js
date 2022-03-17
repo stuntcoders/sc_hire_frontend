@@ -8,7 +8,7 @@ import NotFound from "./components/NotFound"
 
 import HomeAdmin from "./components/admin/Home"
 import Tests from "./components/admin/Tests"
-import Users from "./components/admin/Users"
+import Users from "./components/admin/users/Users"
 
 import HomeCandidate from "./components/candidate/Home"
 
