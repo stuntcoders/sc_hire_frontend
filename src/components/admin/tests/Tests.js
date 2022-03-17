@@ -33,7 +33,7 @@ export default function Tests() {
             onClick={() => toggleTab(1)}
         >
           <span className="cursor-pointer">
-            Assigned
+            Review
           </span>
           <span className={`inline-flex self-center w-16 h-px ml-2 mt-2 ${itemTabOpen === 1 ? "bg-indigo-500" : "bg-gray-600"}`}></span>
         </li>
