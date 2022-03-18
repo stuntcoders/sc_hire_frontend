@@ -21,7 +21,7 @@ export default function ReviewDetails() {
     <>
       <ul className="flex mb-2 space-x-2">
         <li className="flex items-end text-2xl font-extralight text-gray-400 dark:text-gray-500">
-          <Link to="/admin/tests">
+          <Link to={{ pathname: "/admin/tests", search: "?tab=1" }}>
             <span className="flex items-center group hover:text-indigo-500 cursor-pointer">
               <ChevronLeftIcon className="inline-block mt-px h-5 w-5 text-gray-500 group-hover:text-indigo-500" /> Back
             </span>

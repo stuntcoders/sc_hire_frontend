@@ -1,4 +1,6 @@
+import { useEffect } from "react"
 import useTab from "../../../hooks/useTab"
+import useQuery from "../../../hooks/useQuery"
 
 import Test from "./Test"
 import TestForm from "./TestForm"
@@ -6,6 +8,15 @@ import Review from "./Review"
 
 export default function Tests() {
   const [itemTabOpen, toggleTab] = useTab()
+  let query = useQuery();
+
+  useEffect(() => {
+    let tab = query.get("tab")
+
+    if (tab) {
+      toggleTab(1)
+    }
+ }, []);
 
   let tests = [
     {
