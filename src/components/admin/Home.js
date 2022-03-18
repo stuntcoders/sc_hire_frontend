@@ -6,7 +6,7 @@ export default function Home() {
   return(
     <main className="bg-white dark:bg-gray-800">
       <Nav />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <Outlet />
       </div>
       <svg className="fixed -bottom-20 -right-96 transform -rotate-[60deg] z-0" width="700" height="400" fill="none" viewBox="0 0 784 404">
