@@ -76,7 +76,7 @@ export default function UserForm({ user }) {
                     <option>Admin</option>
                     <option>Candidate</option>
                   </select>
-                </div>
+              </div>
             </div>
             <div className="px-4 pt-3 text-right sm:px-6">
               <button
