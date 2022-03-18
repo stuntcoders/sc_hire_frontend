@@ -1,6 +1,23 @@
+import { useState } from "react"
+
 import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
 
+import Question from "./Question"
+
 export default function QuizForm({ quiz }) {
+  const [questionList, setQuestionList] = useState([])
+  const [selectedOption, setSelectedOption] = useState("checkbox")
+
+  const removeQuestion = index => {
+    const list = [...questionList]
+    list.splice(index, 1)
+    setQuestionList(list)
+  };
+
+  const addQuestion = () => {
+    setQuestionList([...questionList, { type: selectedOption }])
+  };
+
   return (
     <section className="relative block pt-1 pb-4 bg-gray-50 dark:bg-white rounded overflow-hidden">
       <PolygonRight fill="#bbf7d0" className="absolute top-0 right-0" />
@@ -18,7 +35,7 @@ export default function QuizForm({ quiz }) {
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-6 sm:col-span-4">
                   <label htmlFor={`title-${quiz.id}`} className="block text-sm font-medium text-gray-700">
-                    Title
+                    Quiz Title
                   </label>
                   <input
                     type="text"
@@ -43,6 +60,46 @@ export default function QuizForm({ quiz }) {
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
+
+                {!quiz.id && <>
+                  <div className="col-span-6 sm:col-span-4">
+                    <label htmlFor={`quiz-${quiz.id}`} className="block text-sm font-medium text-gray-700">
+                      Question Type
+                    </label>
+                    <select
+                      value={selectedOption}
+                      onChange={e => setSelectedOption(e.target.value)}
+                      id={`quiz-${quiz.id}`}
+                      name={`quiz-${quiz.id}`}
+                      autoComplete="off"
+                      className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    >
+                      <option value="checkbox">Checkbox</option>
+                      <option value="code">Code</option>
+                      <option value="radio">Radio</option>
+                      <option value="text">Text Area</option>
+                    </select>
+                  </div>
+
+                  <div className="flex col-span-6 sm:col-span-2 items-end">
+                    <button
+                      onClick={addQuestion}
+                      type="button"
+                      className="items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                      Add Question
+                    </button>
+                  </div>
+
+                  <div className={`grid grid-cols-3 col-span-6 gap-6 shadow ${questionList.length && "p-4 bg-white rounded"}`}>
+                    {questionList.map((question, index) => {
+                      return (
+                        <Question index={index} type={question.type} removeQuestion={removeQuestion} key={index} />
+                      );
+                    })}
+                  </div>
+                </>
+              }
               </div>
               <div className="px-4 pt-3 text-right sm:px-6">
                 <button

@@ -3,7 +3,7 @@ import Radio from "./Radio"
 
 import { TrashIcon } from "@heroicons/react/outline"
 
-export default function Question({ type, index, handleRemove }) {
+export default function Question({ type, index, removeQuestion }) {
   return (
     <>
       <div className="col-span-3 sm:col-span-2">
@@ -20,7 +20,7 @@ export default function Question({ type, index, handleRemove }) {
       </div>
       <div className="col-span-3 sm:col-span-1 flex justify-start items-end">
         <button
-          onClick={() => handleRemove(index)}
+          onClick={() => removeQuestion(index)}
           type="button"
           className="group focus:outline-none mb-2"
         >
