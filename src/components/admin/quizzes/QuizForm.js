@@ -106,7 +106,7 @@ export default function QuizForm({ quiz }) {
                     </button>
                   </div>
 
-                  <div className={`grid grid-cols-3 col-span-6 gap-6 shadow ${questionList.length && "p-4 bg-white rounded"}`}>
+                  <div className={`grid grid-cols-3 col-span-6 gap-x-6 space-y-4 shadow ${questionList.length && "p-4 bg-white rounded"}`}>
                     {questionList.map((question, index) => {
                       return (
                         <Question index={index} type={question.type} removeQuestion={removeQuestion} key={index} />
