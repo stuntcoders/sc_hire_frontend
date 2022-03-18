@@ -32,15 +32,6 @@ export default function Question({ type, index, removeQuestion }) {
           }
         })()}
       </div>
-      <div className={`col-span-3 sm:col-span-1 flex justify-start ${type === "checkbox" || type === "radio" ? "items-center" : "items-end" }`}>
-        <button
-          onClick={() => removeQuestion(index)}
-          type="button"
-          className="group focus:outline-none mb-2"
-        >
-          <TrashIcon className="h-6 w-6 text-gray-400 group-hover:text-indigo-700 pointer-events-none" />
-        </button>
-      </div>
       <div className="col-span-3">
         {(() => {
           switch (type) {
@@ -52,6 +43,15 @@ export default function Question({ type, index, removeQuestion }) {
               return null
           }
         })()}
+      </div>
+      <div className={`col-span-3 sm:col-span-3 flex justify-end items-end`}>
+        <button
+          onClick={() => removeQuestion(index)}
+          type="button"
+          className="items-center md:mr-0.5 px-4 py-2 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Remove
+        </button>
       </div>
     </>
   )
