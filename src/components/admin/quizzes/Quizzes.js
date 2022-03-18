@@ -2,11 +2,11 @@ import { useEffect } from "react"
 import useTab from "../../../hooks/useTab"
 import useQuery from "../../../hooks/useQuery"
 
-import Test from "./Test"
-import TestForm from "./TestForm"
+import Quiz from "./Quiz"
+import QuizForm from "./QuizForm"
 import Review from "./Review"
 
-export default function Tests() {
+export default function Quizzes() {
   const [itemTabOpen, toggleTab] = useTab()
   let query = useQuery();
 
@@ -16,9 +16,9 @@ export default function Tests() {
     if (tab) {
       toggleTab(1)
     }
- }, []);
+  }, []);
 
-  let tests = [
+  let quizzes = [
     {
       "id": 1,
       "title": "Front-end General Knowledge",
@@ -68,7 +68,7 @@ export default function Tests() {
             onClick={() => toggleTab(2)}
         >
           <span className="cursor-pointer">
-            New Test
+            New Quiz
           </span>
         </li>
       </ul>
@@ -77,8 +77,8 @@ export default function Tests() {
         <>
           <section className="relative bg-white shadow overflow-hidden rounded z-10">
             <ul className="divide-y divide-gray-100 dark:divide-gray-200">
-              {tests.map((test) => (
-                <Test test={test} key={test.id} />
+              {quizzes.map((quiz) => (
+                <Quiz quiz={quiz} key={quiz.id} />
               ))}
             </ul>
           </section>
@@ -97,7 +97,7 @@ export default function Tests() {
         </>
       }
 
-      {itemTabOpen === 2 && <TestForm test={{}} />}
+      {itemTabOpen === 2 && <QuizForm quiz={{}} />}
     </>
   )
 }

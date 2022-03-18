@@ -1,6 +1,6 @@
 import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
 
-export default function TestForm({ test }) {
+export default function QuizForm({ quiz }) {
   return (
     <section className="relative block pt-1 pb-4 bg-gray-50 dark:bg-white rounded overflow-hidden">
       <PolygonRight fill="#bbf7d0" className="absolute top-0 right-0" />
@@ -9,34 +9,34 @@ export default function TestForm({ test }) {
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <h3 className="text-lg font-medium leading-6 text-gray-900">
-              { test.id ? "Edit" : "Create"} Test
+              { quiz.id ? "Edit" : "Create"} Quiz
             </h3>
-            <p className="mt-1 text-sm text-gray-500">{test.title}</p>
+            <p className="mt-1 text-sm text-gray-500">{quiz.title}</p>
           </div>
           <div className="mt-5 md:mt-0 md:col-span-2">
             <form action="#" method="POST">
               <div className="grid grid-cols-6 gap-6">
                 <div className="col-span-6 sm:col-span-4">
-                  <label htmlFor={`title-${test.id}`} className="block text-sm font-medium text-gray-700">
+                  <label htmlFor={`title-${quiz.id}`} className="block text-sm font-medium text-gray-700">
                     Title
                   </label>
                   <input
                     type="text"
-                    name={`title-${test.id}`}
-                    id={`title-${test.id}`}
+                    name={`title-${quiz.id}`}
+                    id={`title-${quiz.id}`}
                     autoComplete="off"
                     className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
 
                 <div className="col-span-6 sm:col-span-2">
-                  <label htmlFor={`duration-${test.id}`} className="block text-sm font-medium text-gray-700">
+                  <label htmlFor={`duration-${quiz.id}`} className="block text-sm font-medium text-gray-700">
                     Duration <span className="italic font-light">(in minutes)</span>
                   </label>
                   <input
                     type="number"
-                    name={`duration-${test.id}`}
-                    id={`duration-${test.id}`}
+                    name={`duration-${quiz.id}`}
+                    id={`duration-${quiz.id}`}
                     autoComplete="off"
                     min={0}
                     step={5}

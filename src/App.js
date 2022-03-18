@@ -8,10 +8,10 @@ import NotFound from "./components/NotFound"
 
 import HomeAdmin from "./components/admin/Home"
 import Dashboard from "./components/admin/dashboard/Dashboard"
-import Tests from "./components/admin/tests/Tests"
-import TestDetails from "./components/admin/tests/TestDetails"
+import Quizzes from "./components/admin/quizzes/Quizzes"
+import QuizDetails from "./components/admin/quizzes/QuizDetails"
+import ReviewDetails from "./components/admin/quizzes/ReviewDetail"
 import Users from "./components/admin/users/Users"
-import ReviewDetails from "./components/admin/tests/ReviewDetail"
 
 import HomeCandidate from "./components/candidate/Home"
 
@@ -24,8 +24,8 @@ function App() {
         <Route path="/" element={ <Login/> } />
         <Route path="/admin" element={ <HomeAdmin /> } >
           <Route path="" element={<Dashboard />} />
-          <Route path="tests" element={ <Tests /> } />
-          <Route path="tests/:id" element={ <TestDetails /> } />
+          <Route path="quizzes" element={ <Quizzes /> } />
+          <Route path="quizzes/:id" element={ <QuizDetails /> } />
           <Route path="users" element={ <Users /> } />
           <Route path="review/:id" element={ <ReviewDetails /> } />
         </Route>

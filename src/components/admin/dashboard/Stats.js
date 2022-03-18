@@ -1,7 +1,7 @@
 const stats = [
   { name: "Total Candidates", stat: "1,897" },
-  { name: "Total Tests", stat: "2002" },
-  { name: "Unrevised Tests", stat: "3" },
+  { name: "Total Quizzes", stat: "2002" },
+  { name: "Unrevised Quizzes", stat: "3" },
 ]
 
 export default function Stats() {

@@ -25,11 +25,11 @@ export default function Nav() {
             Home
           </ NavLink>
           <NavLink
-            to={{ pathname: "tests" }}
+            to={{ pathname: "quizzes" }}
             className={({ isActive }) => (isActive ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4" : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300")}
             end
           >
-            Tests
+            Quizzes
           </ NavLink>
           <NavLink
             to={{ pathname: "users" }}

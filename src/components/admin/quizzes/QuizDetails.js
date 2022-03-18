@@ -2,10 +2,12 @@ import { useParams } from "react-router-dom"
 
 import Back from "../shared/Back"
 
-export default function ReviewDetails() {
+import QuizForm from "./QuizForm"
+
+export default function QuizDetails() {
   const { id } = useParams()
 
-  let review = {
+  let quiz = {
       "id": id,
       "title": "Front-end General Knowledge",
       "duration": "45",
@@ -17,9 +19,9 @@ export default function ReviewDetails() {
 
   return (
     <>
-      <Back path="/admin/tests" search="?tab=1" />
+      <Back path="/admin/quizzes" />
 
-      <div>{id}</div>
+      <QuizForm quiz={quiz} />
     </>
   )
 }

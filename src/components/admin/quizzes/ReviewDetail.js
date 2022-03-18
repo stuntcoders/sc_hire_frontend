@@ -2,12 +2,10 @@ import { useParams } from "react-router-dom"
 
 import Back from "../shared/Back"
 
-import TestForm from "./TestForm"
-
-export default function TestDetails() {
+export default function ReviewDetails() {
   const { id } = useParams()
 
-  let test = {
+  let review = {
       "id": id,
       "title": "Front-end General Knowledge",
       "duration": "45",
@@ -19,9 +17,9 @@ export default function TestDetails() {
 
   return (
     <>
-      <Back path="/admin/tests" />
+      <Back path="/admin/quizzes" search="?tab=1" />
 
-      <TestForm test={test} />
+      <div>{id}</div>
     </>
   )
 }
