@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
+import { CollectionIcon, ClockIcon } from "@heroicons/react/outline"
 
 import Question from "./Question"
 
@@ -29,6 +30,20 @@ export default function QuizForm({ quiz }) {
               { quiz.id ? "Edit" : "Create"} Quiz
             </h3>
             <p className="mt-1 text-sm text-gray-500">{quiz.title}</p>
+            <div className="space-y-1 mt-1">
+              <div className="flex items-center text-sm text-gray-500">
+                <CollectionIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" aria-hidden="true" />
+                <span className="font-light">
+                  {questionList.length} question(s)
+                </span>
+              </div>
+              <div className="flex items-center text-sm text-gray-500">
+                <ClockIcon className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" aria-hidden="true" />
+                <span className="font-light">
+                  {questionList.length * 5} minutes
+                </span>
+              </div>
+            </div>
           </div>
           <div className="mt-5 md:mt-0 md:col-span-2">
             <form action="#" method="POST">
