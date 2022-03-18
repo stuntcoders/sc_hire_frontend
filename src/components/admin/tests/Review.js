@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import { ClockIcon, ChevronRightIcon } from "@heroicons/react/outline"
 
 export default function Review({ review }) {
@@ -44,7 +46,9 @@ export default function Review({ review }) {
             </div>
           </div>
           <div className="ml-5 flex-shrink-0 cursor-pointer">
-            <ChevronRightIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
+            <Link to={`/admin/review/${review.id}`}>
+              <ChevronRightIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

@@ -11,6 +11,7 @@ import Dashboard from "./components/admin/dashboard/Dashboard"
 import Tests from "./components/admin/tests/Tests"
 import TestDetails from "./components/admin/tests/TestDetails"
 import Users from "./components/admin/users/Users"
+import ReviewDetails from "./components/admin/tests/ReviewDetail"
 
 import HomeCandidate from "./components/candidate/Home"
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="tests" element={ <Tests /> } />
           <Route path="tests/:id" element={ <TestDetails /> } />
           <Route path="users" element={ <Users /> } />
+          <Route path="review/:id" element={ <ReviewDetails /> } />
         </Route>
         <Route path="/candidate" element={ <HomeCandidate /> } />
         <Route path="*" element={ <NotFound /> } />
