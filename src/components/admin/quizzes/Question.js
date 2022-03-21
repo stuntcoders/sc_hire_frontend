@@ -4,7 +4,7 @@ import Radio from "./Radio"
 export default function Question({ type, index, removeQuestion }) {
   return (
     <>
-      <div className="col-span-3 sm:col-span-2">
+      <div className="col-span-3 w-full sm:col-span-2 bg-gray-50 p-4 rounded">
         <label htmlFor={`title-${index}`} className="block text-sm font-medium capitalize text-gray-700">
           {index + 1}. {type} Question Title
         </label>
