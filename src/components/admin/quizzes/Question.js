@@ -6,7 +6,7 @@ import { XIcon } from "@heroicons/react/outline"
 export default function Question({ type, index, removeQuestion }) {
   return (
     <>
-      <div className="col-span-3 w-full bg-gray-50 p-4 rounded">
+      <div className="col-span-3 w-full bg-gray-50 p-4 border-t-2 border-gray-200 rounded">
         <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700">
           {index + 1}. {type} Question Title
 
@@ -39,7 +39,7 @@ export default function Question({ type, index, removeQuestion }) {
           }
         })()}
       </div>
-      <div className="col-span-3">
+      <div className="col-span-3 mb-4 shadow-sm">
         {(() => {
           switch (type) {
             case "checkbox":
