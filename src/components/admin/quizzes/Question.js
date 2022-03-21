@@ -1,8 +1,6 @@
 import Checkbox from "./Checkbox"
 import Radio from "./Radio"
 
-import { TrashIcon } from "@heroicons/react/outline"
-
 export default function Question({ type, index, removeQuestion }) {
   return (
     <>
