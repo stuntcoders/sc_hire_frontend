@@ -4,7 +4,7 @@ import Nav from "./shared/Nav"
 
 export default function Home() {
   return(
-    <main className="bg-white dark:bg-gray-800">
+    <main className="bg-white dark:bg-gray-800 pb-4">
       <Nav />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <Outlet />
