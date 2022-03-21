@@ -4,7 +4,7 @@ import Radio from "./Radio"
 export default function Question({ type, index, removeQuestion }) {
   return (
     <>
-      <div className="col-span-3 w-full sm:col-span-2 bg-gray-50 p-4 rounded">
+      <div className="col-span-3 w-full bg-gray-50 p-4 rounded">
         <label htmlFor={`title-${index}`} className="block text-sm font-medium capitalize text-gray-700">
           {index + 1}. {type} Question Title
         </label>
@@ -18,11 +18,11 @@ export default function Question({ type, index, removeQuestion }) {
         {(() => {
           switch (type) {
             case "checkbox":
-              return <p className="mt-2 text-sm text-gray-500" id="email-description">
+              return <p className="mt-2 text-sm text-gray-500 italic" id="email-description">
                 *Please check correct answer(s)
               </p>
             case "radio":
-              return <p className="mt-2 text-sm text-gray-500" id="email-description">
+              return <p className="mt-2 text-sm text-gray-500 italic" id="email-description">
                 *Please check correct answer
               </p>
             default:

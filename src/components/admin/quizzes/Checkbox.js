@@ -21,7 +21,7 @@ export default function Checkbox({ index }) {
             <input
               id={`checkbox-input-${index}-0`}
               type="text"
-              className="inline-block w-full h-6 border-0 border-b border-transparent bg-gray-50 focus:border-indigo-600 focus:ring-0 sm:text-sm"
+              className="inline-block w-full h-6 border-0 border-b border-transparent bg-gray-50 placeholder:text-gray-300 focus:border-indigo-600 focus:ring-0 sm:text-sm"
               placeholder="Checkbox option 1"
             />
           </div>
@@ -43,7 +43,7 @@ export default function Checkbox({ index }) {
                 <input
                   id={question.input}
                   type="text"
-                  className="inline-block w-full h-6 border-0 border-b border-transparent bg-gray-50 focus:border-indigo-600 focus:ring-0 sm:text-sm"
+                  className="inline-block w-full h-6 border-0 border-b border-transparent bg-gray-50 placeholder:text-gray-300 focus:border-indigo-600 focus:ring-0 sm:text-sm"
                   placeholder={`Checkbox option ${question_index + 2}`}
                 />
               </div>
