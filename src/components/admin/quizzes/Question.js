@@ -1,12 +1,21 @@
 import Checkbox from "./Checkbox"
 import Radio from "./Radio"
 
+import { XIcon } from "@heroicons/react/outline"
+
 export default function Question({ type, index, removeQuestion }) {
   return (
     <>
       <div className="col-span-3 w-full bg-gray-50 p-4 rounded">
-        <label htmlFor={`title-${index}`} className="block text-sm font-medium capitalize text-gray-700">
+        <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700">
           {index + 1}. {type} Question Title
+
+          <span
+            onClick={() => removeQuestion(index)}
+            className="group p-1 rounded-r cursor-pointer"
+          >
+            <XIcon className="h-5 w-5 text-gray-600 group-hover:text-gray-900 pointer-events-none" />
+          </span>
         </label>
         <input
           type="text"
@@ -41,15 +50,6 @@ export default function Question({ type, index, removeQuestion }) {
               return null
           }
         })()}
-      </div>
-      <div className={`col-span-3 sm:col-span-3 flex justify-end items-end`}>
-        <button
-          onClick={() => removeQuestion(index)}
-          type="button"
-          className="items-center md:mr-0.5 px-4 py-2 border border-transparent text-xs font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          Remove
-        </button>
       </div>
     </>
   )
