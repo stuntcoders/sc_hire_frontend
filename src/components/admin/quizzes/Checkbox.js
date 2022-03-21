@@ -7,7 +7,7 @@ export default function Checkbox({ index }) {
 
   return (
     <fieldset className="space-y-4 p-4 bg-gray-50 rounded">
-      <div className="relative flex items-start">
+      <div className="flex items-start">
         <div className="flex items-center h-5">
           <input
             id={`checkbox-${index}-0`}
