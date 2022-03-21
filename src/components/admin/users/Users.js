@@ -1,3 +1,5 @@
+import AnimatedPage from "../../AnimatedPage"
+
 import useTab from "../../../hooks/useTab";
 
 import UserForm from "./UserForm";
@@ -36,7 +38,7 @@ export default function Users() {
   ]
 
   return (
-    <>
+    <AnimatedPage>
       <ul className="flex mb-2 space-x-2">
         <li className={ `flex items-end ${itemTabOpen === 0 ? "text-3xl font-light text-gray-800 dark:text-gray-50" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}` }
             onClick={() => toggleTab(0)}
@@ -80,6 +82,6 @@ export default function Users() {
           <UserForm user={{}} />
         </section>
       }
-    </>
+    </AnimatedPage>
   );
 }
