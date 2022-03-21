@@ -1,4 +1,5 @@
 import { useState } from "react"
+import useQuestionList from "../../../hooks/useQuestionList"
 
 import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
 import { CollectionIcon, ClockIcon } from "@heroicons/react/outline"
@@ -6,18 +7,8 @@ import { CollectionIcon, ClockIcon } from "@heroicons/react/outline"
 import Question from "./Question"
 
 export default function QuizForm({ quiz }) {
-  const [questionList, setQuestionList] = useState([])
+  const [questionList, addQuestion, removeQuestion] = useQuestionList()
   const [selectedOption, setSelectedOption] = useState("checkbox")
-
-  const removeQuestion = index => {
-    const list = [...questionList]
-    list.splice(index, 1)
-    setQuestionList(list)
-  };
-
-  const addQuestion = () => {
-    setQuestionList([...questionList, { type: selectedOption }])
-  };
 
   return (
     <section className="relative block pt-1 pb-4 bg-gray-50 dark:bg-white rounded overflow-hidden">
@@ -98,7 +89,7 @@ export default function QuizForm({ quiz }) {
 
                   <div className="flex col-span-6 sm:col-span-2 items-end">
                     <button
-                      onClick={addQuestion}
+                      onClick={() => addQuestion({ type: selectedOption })}
                       type="button"
                       className="items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
