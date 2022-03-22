@@ -1,10 +1,16 @@
 import AnimatedPage from "../../AnimatedPage"
+import { motion } from "framer-motion"
 
 import useCard from "../../../hooks/useCard"
 
 import UserForm from "./UserForm"
 
 import { KeyIcon, ChevronUpIcon } from "@heroicons/react/outline"
+
+const variants = {
+  open: { rotate: 180 },
+  closed: { rotate: 0 },
+}
 
 export default function User({ user, className }) {
   const [itemCardOpen, toggleCard] = useCard()
@@ -41,9 +47,15 @@ export default function User({ user, className }) {
                   </div>
               }
             </div>
-            <div onClick={() => toggleCard()} className="ml-5 flex-shrink-0 cursor-pointer">
+            <motion.div
+              onClick={() => toggleCard()}
+              className="ml-5 flex-shrink-0 cursor-pointer"
+              animate={itemCardOpen ? "open" : "closed"}
+              variants={variants}
+              whileHover={{ scale: 1.1 }}
+            >
               <ChevronUpIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
-            </div>
+            </motion.div>
           </div>
 
           { itemCardOpen && <UserForm user={user} /> }
