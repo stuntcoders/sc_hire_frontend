@@ -5,6 +5,12 @@ import Radio from "./Radio"
 
 import { XIcon } from "@heroicons/react/outline"
 
+const animations = {
+  initial: {opacity: 0, y: -50},
+  animate: {opacity: 1, y : 0},
+  exit: {opacity: 0, y: -20}
+}
+
 export default function Question({ type, index, removeQuestion }) {
   const instructions = (inputType) => {
     switch (inputType) {
@@ -23,7 +29,15 @@ export default function Question({ type, index, removeQuestion }) {
 
   return (
     <>
-      <div className={`col-span-3 w-full bg-gray-50 dark:bg-gray-800 p-4 border-t-2 border-gray-200 dark:border-gray-600 ${ (type === "text" || type === "code") ? "rounded" : "rounded-t"}`}>
+      <motion.div
+        className={`col-span-3 w-full bg-gray-50 dark:bg-gray-800 p-4 border-t-2 border-gray-200 dark:border-gray-600 ${ (type === "text" || type === "code") ? "rounded" : "rounded-t"}`}
+        variants={animations}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{duration: 0.3}}
+        exitBeforeEnter
+      >
         <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700 dark:text-white">
           {index + 1}. {type} Question Title
 
@@ -43,8 +57,15 @@ export default function Question({ type, index, removeQuestion }) {
           className="mt-1 dark:bg-gray-700 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm dark:text-white border-gray-300 dark:border-none rounded-md"
         />
         {instructions(type)}
-      </div>
-      <div className="col-span-3 mb-4 shadow-sm">
+      </motion.div>
+      <motion.div
+        className="col-span-3 mb-4 shadow-sm"
+        variants={animations}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{duration: 0.3}}
+      >
         {(() => {
           switch (type) {
             case "checkbox":
@@ -55,7 +76,7 @@ export default function Question({ type, index, removeQuestion }) {
               return null
           }
         })()}
-      </div>
+      </motion.div>
     </>
   )
 }
