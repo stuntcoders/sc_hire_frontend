@@ -66,7 +66,7 @@ export default function Users() {
       </ul>
 
       <section className="relative bg-white shadow overflow-hidden rounded z-10">
-        <ul className="divide-y divide-gray-100 dark:divide-gray-200">
+        <ul className="dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
           {users.map((user) => (
             (() => {
               if (itemTabOpen === 0 && user.role === "admin") {
