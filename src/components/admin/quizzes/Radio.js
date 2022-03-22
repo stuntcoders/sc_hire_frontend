@@ -1,6 +1,6 @@
 import useQuestionList from "../../../hooks/useQuestionList"
 
-import { PlusSmIcon, MinusSmIcon } from "@heroicons/react/outline"
+import InputButtons from "./InputButtons"
 
 export default function Radio({ index }) {
   const [questionList, addQuestion, removeQuestion] = useQuestionList()
@@ -49,20 +49,12 @@ export default function Radio({ index }) {
         );
       })}
 
-      <div className="flex col-span-6 sm:col-span-2 justify-center divide-x dark:divide-gray-600">
-        <span
-          onClick={() => addQuestion({ radio: `radio-${index}-${questionList.length + 1}`, input: `radio-input-${index}-${questionList.length + 1}` })}
-          className="p-1 bg-indigo-600 hover:bg-indigo-700 rounded-l cursor-pointer"
-        >
-          <PlusSmIcon className="h-5 w-5 text-white pointer-events-none" />
-        </span>
-        <span
-          onClick={() => removeQuestion(-1)}
-          className={`p-1 rounded-r ${ questionList.length ? "bg-indigo-600 hover:bg-indigo-700 cursor-pointer" : "bg-gray-200 dark:bg-gray-800 cursor-not-allowed" }`}
-        >
-          <MinusSmIcon className="h-5 w-5 text-white pointer-events-none" />
-        </span>
-      </div>
+      <InputButtons
+        addQuestion={addQuestion}
+        removeQuestion={removeQuestion}
+        object={{ radio: `radio-${index}-${questionList.length + 1}`, input: `radio-input-${index}-${questionList.length + 1}` }}
+        list={questionList}
+      />
     </fieldset>
   )
 }
