@@ -6,6 +6,19 @@ import { Link } from "react-router-dom"
 import { ClockIcon, ChevronRightIcon } from "@heroicons/react/outline"
 
 export default function Review({ review }) {
+  const statusColor = (status) => {
+    switch(status) {
+      case "unrevised":
+        return "text-indigo-600 dark:text-indigo-500"
+      case "passed":
+        return "text-green-400 dark:text-green-300"
+      case "failed":
+        return "text-gray-400"
+      default:
+        return null
+    }
+  }
+
   return (
     <AnimatedPage>
       <li key={review.id}>
@@ -44,7 +57,7 @@ export default function Review({ review }) {
 
               <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
                 <div className="flex overflow-hidden -space-x-1">
-                  <span className={`text-sm ${review.status === "passed" ? "text-indigo-600 dark:text-indigo-500" : "text-gray-300"}`}>
+                  <span className={`text-sm ${statusColor(review.status)}`}>
                     {review.status}
                   </span>
                 </div>
