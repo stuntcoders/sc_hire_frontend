@@ -9,35 +9,40 @@ export default function Nav() {
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <a href="#">
             <span className="sr-only">Stuntcoders</span>
-            <img
-              className="h-8 w-auto sm:h-10 rounded"
-              src={logo}
-              alt="Stuntcoders"
-            />
+            <img className="h-8 w-auto sm:h-10 rounded" src={logo} alt="Stuntcoders" />
           </a>
         </div>
         <nav className="space-x-10">
           <NavLink
             to={{ pathname: "/admin" }}
-            className={({ isActive }) => (isActive ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4" : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300")}
-            end
-          >
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4"
+                : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300"
+            }
+            end>
             Home
-          </ NavLink>
+          </NavLink>
           <NavLink
             to={{ pathname: "quizzes" }}
-            className={({ isActive }) => (isActive ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4" : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300")}
-            end
-          >
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4"
+                : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300"
+            }
+            end>
             Quizzes
-          </ NavLink>
+          </NavLink>
           <NavLink
             to={{ pathname: "users" }}
-            className={({ isActive }) => (isActive ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4" : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300")}
-            end
-          >
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4"
+                : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300"
+            }
+            end>
             Users
-          </ NavLink>
+          </NavLink>
         </nav>
         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <a href="#" className="whitespace-nowrap text-base font-light text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300">

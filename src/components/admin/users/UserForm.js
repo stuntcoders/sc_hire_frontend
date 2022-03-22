@@ -7,11 +7,13 @@ export default function UserForm({ user }) {
   return (
     <AnimatedPage>
       <div className={`relative bg-white dark:bg-gray-800 shadow mx-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10 overflow-hidden ${user.id ? "mt-1" : "mt-4"}`}>
-        {user.id && <PolygonLeft fill="#4338ca" className="absolute top-0 left-0 hidden md:block" /> }
+        {user.id && <PolygonLeft fill="#4338ca" className="absolute top-0 left-0 hidden md:block" />}
 
         <div className="relative md:grid md:grid-cols-3 md:gap-6 z-10">
           <div className="md:col-span-1">
-            <h3 className={`text-lg font-medium leading-6 ${user.id ? "md:text-white" : "text-gray-900 dark:text-white"}`}>{ user.id ? "Edit" : "Create"} User</h3>
+            <h3 className={`text-lg font-medium leading-6 ${user.id ? "md:text-white" : "text-gray-900 dark:text-white"}`}>
+              {user.id ? "Edit" : "Create"} User
+            </h3>
             {user.id && <p className="mt-1 text-sm md:text-white">{user.role}</p>}
           </div>
           <div className="mt-5 md:mt-0 md:col-span-2">
@@ -68,26 +70,24 @@ export default function UserForm({ user }) {
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
-                    <label htmlFor={`role-${user.id}`} className="block text-sm font-medium text-gray-700 dark:text-white">
-                      Role
-                    </label>
-                    <select
-                      id={`role-${user.id}`}
-                      name={`role-${user.id}`}
-                      autoComplete="off"
-                      className="mt-1 block w-full py-2 px-3 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-none bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    >
-                      <option>Admin</option>
-                      <option>Candidate</option>
-                    </select>
+                  <label htmlFor={`role-${user.id}`} className="block text-sm font-medium text-gray-700 dark:text-white">
+                    Role
+                  </label>
+                  <select
+                    id={`role-${user.id}`}
+                    name={`role-${user.id}`}
+                    autoComplete="off"
+                    className="mt-1 block w-full py-2 px-3 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-none bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option>Admin</option>
+                    <option>Candidate</option>
+                  </select>
                 </div>
               </div>
               <div className="px-4 pt-3 text-right sm:px-6">
                 <motion.button
                   type="submit"
                   className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  whileHover={{ scale: 1.05 }}
-                >
+                  whileHover={{ scale: 1.05 }}>
                   Save
                 </motion.button>
               </div>

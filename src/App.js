@@ -24,22 +24,22 @@ function App() {
     <>
       <AnimatePresence exitBeforeEnter>
         <Routes key={location.pathname} location={location}>
-          <Route path="/" element={ <Login/> } />
-          <Route path="/admin" element={ <HomeAdmin /> } >
+          <Route path="/" element={<Login />} />
+          <Route path="/admin" element={<HomeAdmin />}>
             <Route path="" element={<Dashboard />} />
-            <Route path="quizzes" element={ <Quizzes /> } />
-            <Route path="quizzes/:id" element={ <QuizDetails /> } />
-            <Route path="users" element={ <Users /> } />
-            <Route path="review/:id" element={ <ReviewDetails /> } />
+            <Route path="quizzes" element={<Quizzes />} />
+            <Route path="quizzes/:id" element={<QuizDetails />} />
+            <Route path="users" element={<Users />} />
+            <Route path="review/:id" element={<ReviewDetails />} />
           </Route>
-          <Route path="/candidate" element={ <HomeCandidate /> } />
-          <Route path="*" element={ <NotFound /> } />
+          <Route path="/candidate" element={<HomeCandidate />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
 
       <ThemeToggle theme={colorTheme} setTheme={setTheme} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

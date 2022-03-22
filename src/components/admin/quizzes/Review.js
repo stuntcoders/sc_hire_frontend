@@ -6,8 +6,8 @@ import { Link } from "react-router-dom"
 import { ClockIcon, ChevronRightIcon } from "@heroicons/react/outline"
 
 export default function Review({ review }) {
-  const statusColor = (status) => {
-    switch(status) {
+  const statusColor = status => {
+    switch (status) {
       case "unrevised":
         return "text-indigo-600 dark:text-indigo-500"
       case "passed":
@@ -38,7 +38,7 @@ export default function Review({ review }) {
                         month: "long",
                         day: "2-digit",
                         hour: "numeric",
-                        minute: "numeric"
+                        minute: "numeric",
                       }).format(review.start)}
                     </span>
                     &nbsp;-&nbsp;
@@ -48,7 +48,7 @@ export default function Review({ review }) {
                         month: "long",
                         day: "2-digit",
                         hour: "numeric",
-                        minute: "numeric"
+                        minute: "numeric",
                       }).format(review.end)}
                     </span>
                   </div>
@@ -57,16 +57,11 @@ export default function Review({ review }) {
 
               <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
                 <div className="flex overflow-hidden -space-x-1">
-                  <span className={`text-sm ${statusColor(review.status)}`}>
-                    {review.status}
-                  </span>
+                  <span className={`text-sm ${statusColor(review.status)}`}>{review.status}</span>
                 </div>
               </div>
             </div>
-            <motion.div
-              className="ml-5 flex-shrink-0 cursor-pointer"
-              whileHover={{ scale: 1.1 }}
-            >
+            <motion.div className="ml-5 flex-shrink-0 cursor-pointer" whileHover={{ scale: 1.1 }}>
               <Link to={`/admin/review/${review.id}`}>
                 <ChevronRightIcon className="h-5 w-5 text-gray-400 dark:text-gray-300 pointer-events-none" aria-hidden="true" />
               </Link>

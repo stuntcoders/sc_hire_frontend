@@ -13,7 +13,7 @@ import { quizzes, reviews } from "../dummyData"
 
 export default function Quizzes() {
   const [itemTabOpen, toggleTab] = useTab()
-  let query = useQuery();
+  let query = useQuery()
 
   useEffect(() => {
     let tab = query.get("tab")
@@ -21,41 +21,37 @@ export default function Quizzes() {
     if (tab) {
       toggleTab(1)
     }
-  }, []);
+  }, [])
 
-  const tabs = [
-    { title: "Templates" },
-    { title: "Reviews" },
-    { title: "New Quiz" }
-  ]
+  const tabs = [{ title: "Templates" }, { title: "Reviews" }, { title: "New Quiz" }]
 
-  return(
+  return (
     <AnimatedPage>
       <PageNav tabs={tabs} tabOpen={itemTabOpen} toggleTab={toggleTab} />
 
-      {itemTabOpen === 0 &&
+      {itemTabOpen === 0 && (
         <>
           <section className="relative bg-white shadow overflow-hidden rounded z-10">
             <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
-              {quizzes.map((quiz) => (
+              {quizzes.map(quiz => (
                 <Quiz quiz={quiz} key={quiz.id} />
               ))}
             </ul>
           </section>
         </>
-      }
+      )}
 
-      {itemTabOpen === 1 &&
+      {itemTabOpen === 1 && (
         <>
           <section className="relative bg-white shadow overflow-hidden rounded z-10">
             <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
-              {reviews.map((review) => (
+              {reviews.map(review => (
                 <Review review={review} key={review.id} />
               ))}
             </ul>
           </section>
         </>
-      }
+      )}
 
       {itemTabOpen === 2 && <QuizForm quiz={{}} />}
     </AnimatedPage>

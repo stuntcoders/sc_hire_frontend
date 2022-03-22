@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 export default function useDarkMode() {
   const [theme, setTheme] = useState(localStorage.stunt_theme)
@@ -10,7 +10,7 @@ export default function useDarkMode() {
     root.classList.remove(colorTheme)
     root.classList.add(theme)
 
-    localStorage.setItem('stunt_theme', theme)
+    localStorage.setItem("stunt_theme", theme)
   }, [theme, colorTheme])
 
   return [colorTheme, setTheme]

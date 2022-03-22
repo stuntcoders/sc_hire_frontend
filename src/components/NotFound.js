@@ -11,23 +11,17 @@ export default function NotFound() {
             <div className="flex-shrink-0 pt-10 sm:pt-16">
               <a href="/" className="inline-flex">
                 <span className="sr-only">Stuntcoders</span>
-                <img
-                  className="h-12 w-auto rounded"
-                  src={logo}
-                  alt=""
-                />
+                <img className="h-12 w-auto rounded" src={logo} alt="" />
               </a>
             </div>
             <div className="flex-shrink-0 my-auto py-16 sm:py-32">
               <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-500 uppercase tracking-wide">404 error</p>
-              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight sm:text-5xl">
-                Page not found
-              </h1>
+              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight sm:text-5xl">Page not found</h1>
               <p className="mt-2 text-base text-gray-500 dark:text-gray-400">Sorry, we couldn’t find the page you’re looking for.</p>
               <div className="mt-6">
-              <Link to={{ pathname: "/" }} className="text-lg font-medium dark:text-indigo-500 dark:hover:text-indigo-400">
-                Go back home
-              </ Link>
+                <Link to={{ pathname: "/" }} className="text-lg font-medium dark:text-indigo-500 dark:hover:text-indigo-400">
+                  Go back home
+                </Link>
               </div>
             </div>
           </div>
@@ -58,5 +52,5 @@ export default function NotFound() {
         />
       </div>
     </div>
-  );
+  )
 }

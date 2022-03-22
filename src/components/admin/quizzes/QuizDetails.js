@@ -13,7 +13,7 @@ export default function QuizDetails() {
     <>
       <Back path="/admin/quizzes" />
 
-      <QuizForm quiz={{...quiz, id: id}} />
+      <QuizForm quiz={{ ...quiz, id: id }} />
     </>
   )
 }
