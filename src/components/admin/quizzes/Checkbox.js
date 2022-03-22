@@ -1,8 +1,10 @@
+import { motion } from "framer-motion"
+
 import useQuestionList from "../../../hooks/useQuestionList"
 
 import InputButtons from "./InputButtons"
 
-export default function Checkbox({ index }) {
+export default function Checkbox({ index, animations }) {
   const [questionList, addQuestion, removeQuestion] = useQuestionList()
 
   return (
@@ -28,7 +30,15 @@ export default function Checkbox({ index }) {
 
       {questionList.map((question, question_index) => {
         return (
-          <div key={question_index} className="relative flex items-start">
+          <motion.div
+            key={question_index}
+            className="relative flex items-start"
+            variants={animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{duration: 0.2}}
+          >
             <div className="flex items-center h-5">
               <input
                 id={question.checkbox}
@@ -45,7 +55,7 @@ export default function Checkbox({ index }) {
                 placeholder={`Checkbox option ${question_index + 2}`}
               />
             </div>
-          </div>
+          </motion.div>
         );
       })}
 

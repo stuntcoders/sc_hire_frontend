@@ -27,12 +27,12 @@ export default function Question({ type, index, removeQuestion }) {
     }
   }
 
-  const component = (inputType, inputIndex) => {
+  const component = (inputType, inputIndex, inputAnimations) => {
     switch (inputType) {
       case "checkbox":
-        return <Checkbox index={inputIndex} />
+        return <Checkbox index={inputIndex} animations={inputAnimations} />
       case "radio":
-        return <Radio index={inputIndex} />
+        return <Radio index={inputIndex} animations={inputAnimations} />
       default:
         return null
     }
@@ -47,7 +47,6 @@ export default function Question({ type, index, removeQuestion }) {
         animate="animate"
         exit="exit"
         transition={{duration: 0.3}}
-        exitBeforeEnter
       >
         <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700 dark:text-white">
           {index + 1}. {type} Question Title
@@ -77,7 +76,7 @@ export default function Question({ type, index, removeQuestion }) {
         exit="exit"
         transition={{duration: 0.3}}
       >
-        {component(type, index)}
+        {component(type, index, animations)}
       </motion.div>
     </>
   )

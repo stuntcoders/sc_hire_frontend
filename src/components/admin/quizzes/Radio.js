@@ -1,8 +1,10 @@
+import { motion } from "framer-motion"
+
 import useQuestionList from "../../../hooks/useQuestionList"
 
 import InputButtons from "./InputButtons"
 
-export default function Radio({ index }) {
+export default function Radio({ index, animations }) {
   const [questionList, addQuestion, removeQuestion] = useQuestionList()
 
   return (
@@ -28,7 +30,15 @@ export default function Radio({ index }) {
 
       {questionList.map((question, question_index) => {
         return (
-          <div key={question_index} className="relative flex items-start bg-gray-50 dark:bg-gray-800">
+          <motion.div
+            key={question_index}
+            className="relative flex items-start bg-gray-50 dark:bg-gray-800"
+            variants={animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{duration: 0.2}}
+          >
             <div className="flex items-center h-5">
               <input
                 id={question.radio}
@@ -45,7 +55,7 @@ export default function Radio({ index }) {
                 placeholder={`Radio option ${question_index + 2}`}
               />
             </div>
-          </div>
+          </motion.div>
         );
       })}
 
