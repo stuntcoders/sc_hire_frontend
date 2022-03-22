@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import Checkbox from "./Checkbox"
 import Radio from "./Radio"
 
@@ -10,12 +12,13 @@ export default function Question({ type, index, removeQuestion }) {
         <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700 dark:text-white">
           {index + 1}. {type} Question Title
 
-          <span
+          <motion.span
             onClick={() => removeQuestion(index)}
             className="group p-1 rounded-r cursor-pointer"
+            whileHover={{ scale: 1.1 }}
           >
             <XIcon className="h-5 w-5 text-gray-600 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-900 pointer-events-none" />
-          </span>
+          </motion.span>
         </label>
         <input
           type="text"

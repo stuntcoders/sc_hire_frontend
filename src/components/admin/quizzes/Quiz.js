@@ -1,4 +1,5 @@
 import AnimatedPage from "../../AnimatedPage"
+import { motion } from "framer-motion"
 
 import { Link } from "react-router-dom"
 
@@ -29,11 +30,14 @@ export default function Quiz({ quiz }) {
                 </div>
               </div>
             </div>
-            <div className="ml-5 flex-shrink-0 cursor-pointer">
+            <motion.div
+              className="ml-5 flex-shrink-0 cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+            >
               <Link to={`${quiz.id}`}>
                 <ChevronRightIcon className="h-5 w-5 text-gray-400 dark:text-gray-300 pointer-events-none" aria-hidden="true" />
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </li>

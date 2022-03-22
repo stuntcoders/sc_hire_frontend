@@ -1,4 +1,5 @@
 import AnimatedPage from "../../AnimatedPage"
+import { motion } from "framer-motion"
 
 import { Link } from "react-router-dom"
 
@@ -40,7 +41,7 @@ export default function Review({ review }) {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
                 <div className="flex overflow-hidden -space-x-1">
                   <span className={`text-sm ${review.status === "passed" ? "text-indigo-600 dark:text-indigo-500" : "text-gray-300"}`}>
@@ -49,11 +50,14 @@ export default function Review({ review }) {
                 </div>
               </div>
             </div>
-            <div className="ml-5 flex-shrink-0 cursor-pointer">
+            <motion.div
+              className="ml-5 flex-shrink-0 cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+            >
               <Link to={`/admin/review/${review.id}`}>
                 <ChevronRightIcon className="h-5 w-5 text-gray-400 dark:text-gray-300 pointer-events-none" aria-hidden="true" />
               </Link>
-            </div>
+            </motion.div>
           </div>
         </section>
       </li>
