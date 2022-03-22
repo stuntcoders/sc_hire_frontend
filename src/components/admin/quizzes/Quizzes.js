@@ -44,6 +44,12 @@ export default function Quizzes() {
       "start": Date.now(),
       "end": Date.now(),
       "status": "failed",
+    },
+    {
+      "id": "9c3173642192c5ba0307a0c3da2189",
+      "start": Date.now(),
+      "end": Date.now(),
+      "status": "unrevised",
     }
   ]
 
@@ -78,7 +84,7 @@ export default function Quizzes() {
       {itemTabOpen === 0 &&
         <>
           <section className="relative bg-white shadow overflow-hidden rounded z-10">
-            <ul className="divide-y divide-gray-100 dark:divide-gray-200">
+            <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
               {quizzes.map((quiz) => (
                 <Quiz quiz={quiz} key={quiz.id} />
               ))}
@@ -90,7 +96,7 @@ export default function Quizzes() {
       {itemTabOpen === 1 &&
         <>
           <section className="relative bg-white shadow overflow-hidden rounded z-10">
-            <ul className="divide-y divide-gray-100 dark:divide-gray-200">
+            <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
               {reviews.map((review) => (
                 <Review review={review} key={review.id} />
               ))}
