@@ -4,10 +4,10 @@ export default function PageNav({ tabs, tabOpen, toggleTab }) {
       { tabs.map((tab, index) => {
         return <li
           key={index}
-          className={`flex items-end ${tabOpen === index ? "text-3xl font-light text-gray-800 dark:text-gray-50 hover:text-indigo-500 transition-colors duration-500 cursor-pointer" : "text-2xl font-extralight text-gray-400 dark:text-gray-500"}`}
+          className={`flex items-end ${tabOpen === index ? "text-3xl font-light text-gray-800 dark:text-gray-50 cursor-pointer" : "group text-2xl font-extralight text-gray-400 dark:text-gray-500"}`}
           onClick={() => toggleTab(index)}
         >
-          <span>
+          <span className="group-hover:text-indigo-500 transition-colors duration-500">
             {tab.title}
           </span>
           { tabs.length !== index + 1 &&
