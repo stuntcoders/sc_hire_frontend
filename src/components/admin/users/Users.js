@@ -80,7 +80,7 @@ export default function Users() {
       </section>
 
       {itemTabOpen === 2 &&
-        <section className={`relative pb-4 bg-gray-50 dark:bg-white rounded overflow-hidden shadow z-10`}>
+        <section className={`relative pb-4 bg-gray-50 dark:bg-gray-700 rounded overflow-hidden shadow z-10`}>
           <PolygonRight fill="#bbf7d0" className="absolute top-0 right-0" />
 
           <UserForm user={{}} />
