@@ -13,7 +13,7 @@ export default function Radio({ index, animations }) {
         <div className="flex items-center h-5">
           <input
             id={`radio-${index}-0`}
-            name={`radio-${index}-0`}
+            name={`radio-${index}`}
             type="radio"
             className="mt-1.5 dark:bg-gray-700 focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 dark:border-none"
           />
@@ -42,7 +42,7 @@ export default function Radio({ index, animations }) {
             <div className="flex items-center h-5">
               <input
                 id={question.radio}
-                name={question.radio}
+                name={`radio-${index}`}
                 type="radio"
                 className="mt-1 h-4 w-4 dark:bg-gray-700 text-indigo-600 border-gray-300 dark:border-none focus:ring-indigo-500"
               />
