@@ -8,7 +8,7 @@ import { XIcon } from "@heroicons/react/outline"
 export default function Question({ type, index, removeQuestion }) {
   return (
     <>
-      <div className="col-span-3 w-full bg-gray-50 dark:bg-gray-800 p-4 border-t-2 border-gray-200 dark:border-gray-600 rounded">
+      <div className={`col-span-3 w-full bg-gray-50 dark:bg-gray-800 p-4 border-t-2 border-gray-200 dark:border-gray-600 ${ (type === "text" || type === "code") ? "rounded" : "rounded-t"}`}>
         <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700 dark:text-white">
           {index + 1}. {type} Question Title
 

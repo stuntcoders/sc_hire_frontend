@@ -6,7 +6,7 @@ export default function Radio({ index }) {
   const [questionList, addQuestion, removeQuestion] = useQuestionList()
 
   return (
-    <fieldset className="space-y-4 p-4 bg-gray-50 dark:bg-gray-800 rounded">
+    <fieldset className="space-y-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-b">
       <div className="flex items-start">
         <div className="flex items-center h-5">
           <input
