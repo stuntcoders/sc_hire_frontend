@@ -68,9 +68,13 @@ export default function Users() {
       <section className="relative bg-white shadow overflow-hidden rounded z-10">
         <ul className="divide-y divide-gray-100 dark:divide-gray-200">
           {users.map((user) => (
-            user.role === "admin" ?
-              <User user={user} key={user.id} className={itemTabOpen === 0 ? "block" : "hidden"} /> :
-              <User user={user} key={user.id} className={itemTabOpen === 1 ? "block" : "hidden"} />
+            (() => {
+              if (itemTabOpen === 0 && user.role === "admin") {
+                return <User user={user} key={user.id} />
+              } else if (itemTabOpen === 1 && user.role === "candidate") {
+                return <User user={user} key={user.id} />
+              }
+            })()
           ))}
         </ul>
       </section>
