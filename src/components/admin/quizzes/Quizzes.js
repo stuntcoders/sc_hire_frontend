@@ -9,6 +9,8 @@ import Quiz from "./Quiz"
 import QuizForm from "./QuizForm"
 import Review from "./Review"
 
+import { quizzes, reviews } from "../dummyData"
+
 export default function Quizzes() {
   const [itemTabOpen, toggleTab] = useTab()
   let query = useQuery();
@@ -25,39 +27,6 @@ export default function Quizzes() {
     { title: "Templates" },
     { title: "Reviews" },
     { title: "New Quiz" }
-  ]
-
-  let quizzes = [
-    {
-      "id": 1,
-      "title": "Front-end General Knowledge",
-      "duration": "45",
-      "questions": [
-        {"id": 1},
-        {"id": 2}
-      ],
-    }
-  ]
-
-  let reviews = [
-    {
-      "id": "7c5ba039c31364219207a0c3da2189",
-      "start": Date.now(),
-      "end": Date.now(),
-      "status": "passed",
-    },
-    {
-      "id": "c5ba039c317364219207a0c3da2189",
-      "start": Date.now(),
-      "end": Date.now(),
-      "status": "failed",
-    },
-    {
-      "id": "9c3173642192c5ba0307a0c3da2189",
-      "start": Date.now(),
-      "end": Date.now(),
-      "status": "unrevised",
-    }
   ]
 
   return(

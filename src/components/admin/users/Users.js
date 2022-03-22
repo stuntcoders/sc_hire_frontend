@@ -6,6 +6,8 @@ import PageNav from "../shared/PageNav"
 import UserForm from "./UserForm";
 import User from "./User";
 
+import { users } from "../dummyData";
+
 import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
 
 export default function Users() {
@@ -15,33 +17,6 @@ export default function Users() {
     { title: "Admin" },
     { title: "Candidates" },
     { title: "New User" }
-  ]
-
-  let users = [
-    {
-      "id": 1,
-      "first_name": "John",
-      "last_name": "Smith",
-      "email": "john_smith@fake.com",
-      "password": "c5ba039c317364219207a0c3da2189",
-      "role": "admin"
-    },
-    {
-      "id": 2,
-      "first_name": "Jane",
-      "last_name": "Smith",
-      "email": "jane_smith@fake.com",
-      "password": "7c5ba039c31364219207a0c3da2189",
-      "role": "candidate"
-    },
-    {
-      "id": 3,
-      "first_name": "Sarah",
-      "last_name": "Key",
-      "email": "sarah_key@fake.com",
-      "password": "da2187c5ba039c31364219207a0c39",
-      "role": "candidate"
-    },
   ]
 
   return (
