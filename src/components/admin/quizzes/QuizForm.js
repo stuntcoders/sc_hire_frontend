@@ -1,4 +1,5 @@
 import AnimatedPage from "../../AnimatedPage"
+import { motion } from "framer-motion"
 
 import { useState } from "react"
 import useQuestionList from "../../../hooks/useQuestionList"
@@ -91,13 +92,14 @@ export default function QuizForm({ quiz }) {
                     </div>
 
                     <div className="flex col-span-6 sm:col-span-2 items-end">
-                      <button
+                      <motion.button
                         onClick={() => addQuestion({ type: selectedOption })}
                         type="button"
                         className="items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        whileHover={{ scale: 1.05 }}
                       >
                         Add Question
-                      </button>
+                      </motion.button>
                     </div>
 
                     <div className={`relative grid grid-cols-3 col-span-6 gap-x-6 shadow ${questionList.length && "p-4 bg-white dark:bg-gray-700 rounded"}`}>
@@ -111,12 +113,13 @@ export default function QuizForm({ quiz }) {
                 }
                 </div>
                 <div className="px-4 pt-3 text-right sm:px-6">
-                  <button
+                  <motion.button
                     type="submit"
                     className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    whileHover={{ scale: 1.05 }}
                   >
                     Save
-                  </button>
+                  </motion.button>
                 </div>
               </form>
             </div>
