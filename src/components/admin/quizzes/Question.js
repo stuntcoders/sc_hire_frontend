@@ -27,6 +27,17 @@ export default function Question({ type, index, removeQuestion }) {
     }
   }
 
+  const component = (inputType, inputIndex) => {
+    switch (inputType) {
+      case "checkbox":
+        return <Checkbox index={inputIndex} />
+      case "radio":
+        return <Radio index={inputIndex} />
+      default:
+        return null
+    }
+  }
+
   return (
     <>
       <motion.div
@@ -66,16 +77,7 @@ export default function Question({ type, index, removeQuestion }) {
         exit="exit"
         transition={{duration: 0.3}}
       >
-        {(() => {
-          switch (type) {
-            case "checkbox":
-              return <Checkbox index={index} />
-            case "radio":
-              return <Radio index={index} />
-            default:
-              return null
-          }
-        })()}
+        {component(type, index)}
       </motion.div>
     </>
   )
