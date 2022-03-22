@@ -7,8 +7,9 @@ import { ChevronLeftIcon } from "@heroicons/react/outline"
 const animations = {
   rest: { x: -1 },
   hover: { x: [ -4, -6, -2, -4, -6, -2, 0],
+    opacity: [0.4, 0.2, 0.6, 0.4, 0.2, 0.8, 1],
     transition: {
-      duration: 1,
+      duration: 1.4,
       ease: "linear"
     }
   }
