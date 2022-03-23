@@ -9,7 +9,7 @@ import { KeyIcon, ChevronUpIcon } from "@heroicons/react/outline"
 
 const variants = {
   open: { rotate: 180 },
-  closed: { rotate: 0 },
+  closed: { rotate: 0 }
 }
 
 export default function User({ user, className }) {

@@ -38,7 +38,7 @@ export default function Review({ review }) {
                         month: "long",
                         day: "2-digit",
                         hour: "numeric",
-                        minute: "numeric",
+                        minute: "numeric"
                       }).format(review.start)}
                     </span>
                     &nbsp;-&nbsp;
@@ -48,7 +48,7 @@ export default function Review({ review }) {
                         month: "long",
                         day: "2-digit",
                         hour: "numeric",
-                        minute: "numeric",
+                        minute: "numeric"
                       }).format(review.end)}
                     </span>
                   </div>

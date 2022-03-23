@@ -5,7 +5,7 @@ export const users = [
     last_name: "Smith",
     email: "john_smith@fake.com",
     password: "c5ba039c317364219207a0c3da2189",
-    role: "admin",
+    role: "admin"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const users = [
     last_name: "Smith",
     email: "jane_smith@fake.com",
     password: "7c5ba039c31364219207a0c3da2189",
-    role: "candidate",
+    role: "candidate"
   },
   {
     id: 3,
@@ -21,8 +21,8 @@ export const users = [
     last_name: "Key",
     email: "sarah_key@fake.com",
     password: "da2187c5ba039c31364219207a0c39",
-    role: "candidate",
-  },
+    role: "candidate"
+  }
 ]
 
 export const quizzes = [
@@ -30,8 +30,8 @@ export const quizzes = [
     id: 1,
     title: "Front-end General Knowledge",
     duration: "45",
-    questions: [{ id: 1 }, { id: 2 }],
-  },
+    questions: [{ id: 1 }, { id: 2 }]
+  }
 ]
 
 export const reviews = [
@@ -44,7 +44,7 @@ export const reviews = [
       id: "7c5ba039c31364219207a0c3da2189",
       first_name: "Jane",
       last_name: "Smith",
-      email: "jane_smith@fake.com",
+      email: "jane_smith@fake.com"
     },
     quiz: {
       id: 1,
@@ -57,11 +57,11 @@ export const reviews = [
           id: 3,
           type: "code",
           title: "Please write a simple method that determines if the given number N is a prime number?",
-          answer: "function primeNumber ($number)",
+          answer: "function primeNumber ($number)"
         },
-        { id: 4, type: "checkbox", title: "Select Node.js frameworks.", answer: "Nest.js, Koa.js, Angular" },
-      ],
-    },
+        { id: 4, type: "checkbox", title: "Select Node.js frameworks.", answer: "Nest.js, Koa.js, Angular" }
+      ]
+    }
   },
   {
     id: 2,
@@ -72,8 +72,8 @@ export const reviews = [
       id: "c5ba039c317364219207a0c3da2189",
       first_name: "John",
       last_name: "Smith",
-      email: "john_smith@fake.com",
-    },
+      email: "john_smith@fake.com"
+    }
   },
   {
     id: 3,
@@ -84,7 +84,7 @@ export const reviews = [
       id: "da2187c5ba039c31364219207a0c39",
       first_name: "Sarah",
       last_name: "Key",
-      email: "sarah_key@fake.com",
-    },
-  },
+      email: "sarah_key@fake.com"
+    }
+  }
 ]

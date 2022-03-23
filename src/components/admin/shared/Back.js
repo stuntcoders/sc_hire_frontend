@@ -11,9 +11,9 @@ const animations = {
     opacity: [0.4, 0.2, 0.6, 0.4, 0.2, 0.8, 1],
     transition: {
       duration: 1.4,
-      ease: "linear",
-    },
-  },
+      ease: "linear"
+    }
+  }
 }
 
 export default function Back({ path, search = "" }) {

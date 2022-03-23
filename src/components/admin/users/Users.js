@@ -26,7 +26,7 @@ export default function Users() {
               } else if (itemTabOpen === 1 && user.role === "candidate") {
                 return <User user={user} key={user.id} />
               }
-            })(),
+            })()
           )}
         </ul>
       </section>

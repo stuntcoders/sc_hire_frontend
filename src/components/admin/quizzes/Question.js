@@ -8,7 +8,7 @@ import { XIcon } from "@heroicons/react/outline"
 const animations = {
   initial: { opacity: 0, y: -50 },
   animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
+  exit: { opacity: 0, y: -20 }
 }
 
 export default function Question({ type, index, removeQuestion }) {

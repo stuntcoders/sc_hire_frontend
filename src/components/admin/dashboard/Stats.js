@@ -3,13 +3,13 @@ import { motion } from "framer-motion"
 const stats = [
   { name: "Total Candidates", stat: "1,897" },
   { name: "Total Quizzes", stat: "2002" },
-  { name: "Unrevised Quizzes", stat: "3" },
+  { name: "Unrevised Quizzes", stat: "3" }
 ]
 
 const animations = {
   initial: { opacity: 0, x: -80 },
   animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -20 },
+  exit: { opacity: 0, x: -20 }
 }
 
 export default function Stats() {

@@ -18,14 +18,14 @@ import {
   DuplicateIcon,
   ScissorsIcon,
   TemplateIcon,
-  UserIcon,
+  UserIcon
 } from "@heroicons/react/outline"
 
 import { reviews } from "../dummyData"
 
 const variants = {
   open: { rotate: 180 },
-  closed: { rotate: 0 },
+  closed: { rotate: 0 }
 }
 
 export default function ReviewDetails() {
