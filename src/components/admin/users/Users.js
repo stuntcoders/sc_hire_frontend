@@ -17,7 +17,7 @@ export default function Users() {
     <AnimatedPage>
       <PageNav tabs={tabs} tabOpen={itemTabOpen} toggleTab={toggleTab} />
 
-      <section className="relative bg-white shadow overflow-hidden rounded z-10">
+      <section className="relative bg-white dark:bg-gray-700 shadow overflow-hidden rounded z-10">
         <ul className="dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
           {users.map(user =>
             (() => {

@@ -30,27 +30,23 @@ export default function Quizzes() {
       <PageNav tabs={tabs} tabOpen={itemTabOpen} toggleTab={toggleTab} />
 
       {itemTabOpen === 0 && (
-        <>
-          <section className="relative bg-white shadow overflow-hidden rounded z-10">
-            <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
-              {quizzes.map(quiz => (
-                <Quiz quiz={quiz} key={quiz.id} />
-              ))}
-            </ul>
-          </section>
-        </>
+        <section className="relative bg-white dark:bg-gray-700 shadow overflow-hidden rounded z-10">
+          <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
+            {quizzes.map(quiz => (
+              <Quiz quiz={quiz} key={quiz.id} />
+            ))}
+          </ul>
+        </section>
       )}
 
       {itemTabOpen === 1 && (
-        <>
-          <section className="relative bg-white shadow overflow-hidden rounded z-10">
-            <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
-              {reviews.map(review => (
-                <Review review={review} key={review.id} />
-              ))}
-            </ul>
-          </section>
-        </>
+        <section className="relative bg-white dark:bg-gray-700 shadow overflow-hidden rounded z-10">
+          <ul className="bg-gray-50 dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
+            {reviews.map(review => (
+              <Review review={review} key={review.id} />
+            ))}
+          </ul>
+        </section>
       )}
 
       {itemTabOpen === 2 && <QuizForm quiz={{}} />}
