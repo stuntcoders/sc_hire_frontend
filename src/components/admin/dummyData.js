@@ -50,7 +50,17 @@ export const reviews = [
       id: 1,
       title: "Front-end General Knowledge",
       duration: "45",
-      questions: [{ id: 1 }, { id: 2 }],
+      questions: [
+        { id: 1, type: "text", title: "With CSS Grid Layout, we get a new flexible unit, can you name that unit?", answer: "Fr" },
+        { id: 2, type: "radio", title: "In PHP can private members be overridden?", answer: "No" },
+        {
+          id: 3,
+          type: "code",
+          title: "Please write a simple method that determines if the given number N is a prime number?",
+          answer: "function primeNumber ($number)",
+        },
+        { id: 4, type: "checkbox", title: "Select Node.js frameworks.", answer: "Nest.js, Koa.js, Angular" },
+      ],
     },
   },
   {
