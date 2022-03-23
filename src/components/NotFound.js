@@ -27,21 +27,7 @@ export default function NotFound() {
           </div>
         </main>
         <footer className="flex-shrink-0 bg-gray-50 dark:bg-gray-700">
-          <div className="mx-auto max-w-7xl w-full px-4 py-16 sm:px-6 lg:px-8">
-            <nav className="flex space-x-4">
-              <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                Contact Support
-              </a>
-              <span className="inline-block border-l border-gray-300 dark:border-gray-500" aria-hidden="true" />
-              <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                Status
-              </a>
-              <span className="inline-block border-l border-gray-300 dark:border-gray-500" aria-hidden="true" />
-              <a href="#" className="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                Twitter
-              </a>
-            </nav>
-          </div>
+          <div className="mx-auto max-w-7xl w-full px-4 py-16 sm:px-6 lg:px-8"></div>
         </footer>
       </div>
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
