@@ -89,7 +89,8 @@ export default function ReviewDetails() {
                           className="ml-2 flex-shrink-0 cursor-pointer"
                           animate={itemCardOpen ? "open" : "closed"}
                           variants={variants}
-                          whileHover={{ scale: 1.1 }}>
+                          whileHover={{ scale: 1.1 }}
+                        >
                           <ChevronUpIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
                         </motion.div>
                       </div>
@@ -120,7 +121,8 @@ export default function ReviewDetails() {
                         reviews[2].status === "passed"
                           ? "bg-green-300 border-green-300 text-white"
                           : "bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 border-gray-300 dark:border-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                      }`}>
+                      }`}
+                    >
                       Pass
                     </button>
                     <button
@@ -129,7 +131,8 @@ export default function ReviewDetails() {
                         reviews[2].status === "unrevised"
                           ? "bg-indigo-700 border-indigo-700 text-white"
                           : "bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 border-gray-300 dark:border-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                      }`}>
+                      }`}
+                    >
                       Unrevised
                     </button>
                     <button
@@ -138,7 +141,8 @@ export default function ReviewDetails() {
                         reviews[2].status === "failed"
                           ? "bg-gray-300 border-gray-300 text-white cursor-default"
                           : "bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 border-gray-300 dark:border-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                      }`}>
+                      }`}
+                    >
                       Fail
                     </button>
                   </span>

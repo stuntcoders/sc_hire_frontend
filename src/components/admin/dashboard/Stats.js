@@ -25,7 +25,8 @@ export default function Stats() {
               initial="initial"
               animate="animate"
               exit="exit"
-              transition={{ duration: 0.6 }}>
+              transition={{ duration: 0.6 }}
+            >
               <dt className="text-sm font-medium text-gray-500 dark:text-white truncate">{item.name}</dt>
               <dd className="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-300">{item.stat}</dd>
             </motion.div>

@@ -52,7 +52,8 @@ export default function Question({ type, index, removeQuestion }) {
         initial="initial"
         animate="animate"
         exit="exit"
-        transition={{ duration: 0.3 }}>
+        transition={{ duration: 0.3 }}
+      >
         <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700 dark:text-white">
           {index + 1}. {type} Question Title
           <motion.span onClick={() => removeQuestion(index)} className="group p-1 rounded-r cursor-pointer" whileHover={{ scale: 1.1 }}>

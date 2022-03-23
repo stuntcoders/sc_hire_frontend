@@ -77,7 +77,8 @@ export default function UserForm({ user }) {
                     id={`role-${user.id}`}
                     name={`role-${user.id}`}
                     autoComplete="off"
-                    className="mt-1 block w-full py-2 px-3 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-none bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    className="mt-1 block w-full py-2 px-3 dark:bg-gray-700 dark:text-white border border-gray-300 dark:border-none bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  >
                     <option>Admin</option>
                     <option>Candidate</option>
                   </select>
@@ -87,7 +88,8 @@ export default function UserForm({ user }) {
                 <motion.button
                   type="submit"
                   className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  whileHover={{ scale: 1.05 }}>
+                  whileHover={{ scale: 1.05 }}
+                >
                   Save
                 </motion.button>
               </div>

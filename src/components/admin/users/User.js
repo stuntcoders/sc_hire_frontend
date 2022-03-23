@@ -48,7 +48,8 @@ export default function User({ user, className }) {
               className="ml-5 flex-shrink-0 cursor-pointer"
               animate={itemCardOpen ? "open" : "closed"}
               variants={variants}
-              whileHover={{ scale: 1.1 }}>
+              whileHover={{ scale: 1.1 }}
+            >
               <ChevronUpIcon className="h-5 w-5 text-gray-400 pointer-events-none" aria-hidden="true" />
             </motion.div>
           </div>

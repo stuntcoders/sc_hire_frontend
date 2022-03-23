@@ -29,7 +29,8 @@ export default function QuizForm({ quiz }) {
           initial="initial"
           animate="animate"
           exit="exit"
-          transition={{ duration: 0.6 }}>
+          transition={{ duration: 0.6 }}
+        >
           <div className="md:grid md:grid-cols-3 md:gap-6">
             <div className="md:col-span-1">
               <h3 className="text-lg font-medium leading-6 text-gray-900 dark:text-white">{quiz.id ? "Edit" : "Create"} Quiz</h3>
@@ -88,7 +89,8 @@ export default function QuizForm({ quiz }) {
                           id={`quiz-${quiz.id}`}
                           name={`quiz-${quiz.id}`}
                           autoComplete="off"
-                          className="mt-1 dark:bg-gray-700 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm dark:text-white border-gray-300 dark:border-none rounded-md">
+                          className="mt-1 dark:bg-gray-700 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm dark:text-white border-gray-300 dark:border-none rounded-md"
+                        >
                           <option value="checkbox">Checkbox</option>
                           <option value="code">Code</option>
                           <option value="radio">Radio</option>
@@ -101,7 +103,8 @@ export default function QuizForm({ quiz }) {
                           onClick={() => addQuestion({ type: selectedOption })}
                           type="button"
                           className="items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                          whileHover={{ scale: 1.05 }}>
+                          whileHover={{ scale: 1.05 }}
+                        >
                           Add Question
                         </motion.button>
                       </div>
@@ -118,7 +121,8 @@ export default function QuizForm({ quiz }) {
                   <motion.button
                     type="submit"
                     className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    whileHover={{ scale: 1.05 }}>
+                    whileHover={{ scale: 1.05 }}
+                  >
                     Save
                   </motion.button>
                 </div>

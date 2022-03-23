@@ -11,7 +11,8 @@ export default function InputButtons({ addQuestion, removeQuestion, object, list
       <motion.span
         onClick={() => removeQuestion(-1)}
         className={`p-1 rounded-r ${list.length ? "bg-indigo-600 hover:bg-indigo-700 cursor-pointer" : "bg-gray-200 dark:bg-gray-700 cursor-not-allowed"}`}
-        whileHover={{ scale: list.length ? 1.05 : 1 }}>
+        whileHover={{ scale: list.length ? 1.05 : 1 }}
+      >
         <MinusSmIcon className="h-5 w-5 text-white pointer-events-none" />
       </motion.span>
     </div>

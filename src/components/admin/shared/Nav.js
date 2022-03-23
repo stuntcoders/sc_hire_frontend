@@ -20,7 +20,8 @@ export default function Nav() {
                 ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4"
                 : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300"
             }
-            end>
+            end
+          >
             Home
           </NavLink>
           <NavLink
@@ -30,7 +31,8 @@ export default function Nav() {
                 ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4"
                 : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300"
             }
-            end>
+            end
+          >
             Quizzes
           </NavLink>
           <NavLink
@@ -40,7 +42,8 @@ export default function Nav() {
                 ? "text-gray-500 dark:text-gray-50 underline decoration-indigo-600 decoration-2 underline-offset-4"
                 : "whitespace-nowrap text-base text-gray-500 dark:text-gray-50 hover:text-gray-900 dark:hover:text-gray-300"
             }
-            end>
+            end
+          >
             Users
           </NavLink>
         </nav>

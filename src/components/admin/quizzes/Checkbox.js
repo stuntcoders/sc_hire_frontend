@@ -37,7 +37,8 @@ export default function Checkbox({ index, animations }) {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.2 }}>
+            transition={{ duration: 0.2 }}
+          >
             <div className="flex items-center h-5">
               <input
                 id={question.checkbox}

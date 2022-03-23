@@ -25,7 +25,8 @@ export default function Search() {
           </div>
           <button
             type="button"
-            className="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-transparent text-sm font-medium rounded-r-md text-gray-700 dark:text-white bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-500">
+            className="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-transparent text-sm font-medium rounded-r-md text-gray-700 dark:text-white bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 transition-colors duration-500"
+          >
             <SortAscendingIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
             <span>Sort</span>
           </button>
