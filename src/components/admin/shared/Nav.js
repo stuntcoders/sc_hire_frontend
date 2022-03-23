@@ -7,10 +7,10 @@ export default function Nav() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-4">
       <div className="flex justify-between items-center border-b-2 border-gray-100 dark:border-transparent py-6 md:justify-start md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#">
+          <NavLink to={{ pathname: "/admin" }} end>
             <span className="sr-only">Stuntcoders</span>
             <img className="h-8 w-auto sm:h-10 rounded" src={logo} alt="Stuntcoders" />
-          </a>
+          </NavLink>
         </div>
         <nav className="space-x-10">
           <NavLink
