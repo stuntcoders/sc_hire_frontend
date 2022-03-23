@@ -144,7 +144,19 @@ export default function ReviewDetails() {
                   </span>
                 </div>
               </div>
-              <div className="mt-5 md:mt-0 md:col-span-2">Questions</div>
+              <div className="mt-5 md:mt-0 md:col-span-2 space-y-4">
+                {reviews[0].quiz.questions.map((question, index) => {
+                  return (
+                    <div key={question.id}>
+                      <span className="text-sm text-gray-700 dark:text-gray-100">
+                        <span className="text-indigo-500">{index + 1}.</span> {question.title}
+                      </span>
+
+                      <div className="p-2 bg-gray-50 dark:bg-gray-700 dark:text-white text-sm rounded">{question.answer}</div>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </section>
