@@ -8,8 +8,6 @@ import User from "./User"
 
 import { users } from "../dummyData"
 
-import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
-
 export default function Users() {
   const [itemTabOpen, toggleTab] = useTab()
 
@@ -35,7 +33,7 @@ export default function Users() {
 
       {itemTabOpen === 2 && (
         <section className={`relative pb-4 bg-gray-50 dark:bg-gray-700 rounded overflow-hidden shadow z-10`}>
-          <PolygonRight fill="#bbf7d0" className="absolute top-0 right-0" />
+          <div className="absolute top-0 -right-96 w-full h-full bg-green-200 dark:bg-gray-600 -rotate-45 transition-colors duration-1000"></div>
 
           <UserForm user={{}} />
         </section>

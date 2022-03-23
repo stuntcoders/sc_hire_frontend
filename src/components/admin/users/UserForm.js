@@ -1,13 +1,11 @@
 import AnimatedPage from "../../AnimatedPage"
 import { motion } from "framer-motion"
 
-import { ReactComponent as PolygonLeft } from "../../../assets/shapes/polygon_left.svg"
-
 export default function UserForm({ user }) {
   return (
     <AnimatedPage>
       <div className={`relative bg-white dark:bg-gray-800 shadow mx-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10 overflow-hidden ${user.id ? "mt-1" : "mt-4"}`}>
-        {user.id && <PolygonLeft fill="#4338ca" className="absolute top-0 left-0 hidden md:block" />}
+        {user.id && <div className="absolute -top-10 -left-3 w-1/3 h-screen md:bg-indigo-600 -rotate-[18deg]"></div>}
 
         <div className="relative md:grid md:grid-cols-3 md:gap-6 z-10">
           <div className="md:col-span-1">

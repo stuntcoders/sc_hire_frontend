@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import useQuestionList from "../../../hooks/useQuestionList"
 
-import { ReactComponent as PolygonRight } from "../../../assets/shapes/polygon_right.svg"
 import { CollectionIcon, ClockIcon } from "@heroicons/react/outline"
 
 import Question from "./Question"
@@ -16,7 +15,7 @@ export default function QuizForm({ quiz }) {
   return (
     <AnimatedPage>
       <section className="relative block pt-1 pb-4 bg-gray-50 dark:bg-gray-700 rounded overflow-hidden">
-        {/* <PolygonRight fill="#bbf7d0" className="absolute top-0 right-0" /> */}
+        <div className="absolute top-0 -right-96 w-screen h-screen bg-indigo-500 -rotate-45"></div>
 
         <div className="relative bg-white dark:bg-gray-800 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10">
           <div className="md:grid md:grid-cols-3 md:gap-6">
