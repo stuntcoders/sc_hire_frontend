@@ -16,13 +16,13 @@ export default function Question({ type, index, removeQuestion }) {
     switch (inputType) {
       case "checkbox":
         return (
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-300 italic" id="email-description">
+          <p className="mt-2 text-sm italic text-gray-500 dark:text-gray-300" id="email-description">
             *Please check correct answer(s)
           </p>
         )
       case "radio":
         return (
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-300 italic" id="email-description">
+          <p className="mt-2 text-sm italic text-gray-500 dark:text-gray-300" id="email-description">
             *Please check correct answer
           </p>
         )
@@ -45,7 +45,7 @@ export default function Question({ type, index, removeQuestion }) {
   return (
     <>
       <motion.div
-        className={`col-span-3 w-full bg-gray-50 dark:bg-gray-800 p-4 border-t-2 border-gray-200 dark:border-gray-600 ${
+        className={`col-span-3 w-full border-t-2 border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-800 ${
           type === "text" || type === "code" ? "rounded" : "rounded-t"
         }`}
         variants={animations}
@@ -54,10 +54,10 @@ export default function Question({ type, index, removeQuestion }) {
         exit="exit"
         transition={{ duration: 0.3 }}
       >
-        <label htmlFor={`title-${index}`} className="flex justify-between items-center text-sm font-medium capitalize text-gray-700 dark:text-white">
+        <label htmlFor={`title-${index}`} className="flex items-center justify-between text-sm font-medium capitalize text-gray-700 dark:text-white">
           {index + 1}. {type} Question Title
-          <motion.span onClick={() => removeQuestion(index)} className="group p-1 rounded-r cursor-pointer" whileHover={{ scale: 1.1 }}>
-            <XIcon className="h-5 w-5 text-gray-600 dark:text-gray-400 dark:group-hover:text-gray-300 group-hover:text-gray-900 pointer-events-none" />
+          <motion.span onClick={() => removeQuestion(index)} className="group cursor-pointer rounded-r p-1" whileHover={{ scale: 1.1 }}>
+            <XIcon className="pointer-events-none h-5 w-5 text-gray-600 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-300" />
           </motion.span>
         </label>
         <input
@@ -65,7 +65,7 @@ export default function Question({ type, index, removeQuestion }) {
           name={`title-${index}`}
           id={`title-${index}`}
           autoComplete="off"
-          className="mt-1 dark:bg-gray-700 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm dark:text-white border-gray-300 dark:border-none rounded-md"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:text-white sm:text-sm"
         />
         {instructions(type)}
       </motion.div>

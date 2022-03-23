@@ -17,8 +17,8 @@ export default function Users() {
     <AnimatedPage>
       <PageNav tabs={tabs} tabOpen={itemTabOpen} toggleTab={toggleTab} />
 
-      <section className="relative bg-white dark:bg-gray-700 shadow overflow-hidden rounded z-10">
-        <ul className="dark:bg-gray-700 divide-y divide-gray-100 dark:divide-gray-600">
+      <section className="relative z-10 overflow-hidden rounded bg-white shadow dark:bg-gray-700">
+        <ul className="divide-y divide-gray-100 dark:divide-gray-600 dark:bg-gray-700">
           {users.map(user =>
             (() => {
               if (itemTabOpen === 0 && user.role === "admin") {
@@ -32,8 +32,8 @@ export default function Users() {
       </section>
 
       {itemTabOpen === 2 && (
-        <section className={`relative pb-4 bg-gray-50 dark:bg-gray-700 rounded overflow-hidden shadow z-10`}>
-          <div className="absolute top-0 -right-96 w-full h-full bg-green-200 dark:bg-gray-600 -rotate-45 transition-colors duration-1000"></div>
+        <section className={`relative z-10 overflow-hidden rounded bg-gray-50 pb-4 shadow dark:bg-gray-700`}>
+          <div className="absolute top-0 -right-96 h-full w-full -rotate-45 bg-green-200 transition-colors duration-1000 dark:bg-gray-600"></div>
 
           <UserForm user={{}} />
         </section>

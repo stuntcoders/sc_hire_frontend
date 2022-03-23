@@ -18,12 +18,12 @@ const animations = {
 
 export default function Back({ path, search = "" }) {
   return (
-    <ul className="flex mb-2 space-x-2">
+    <ul className="mb-2 flex space-x-2">
       <li className="flex items-end text-2xl font-extralight text-gray-400 dark:text-gray-500">
         <Link to={{ pathname: `${path}`, search: `${search}` }}>
-          <motion.span className="flex items-center group hover:text-indigo-500 cursor-pointer" initial="rest" whileHover="hover" animate="rest">
+          <motion.span className="group flex cursor-pointer items-center hover:text-indigo-500" initial="rest" whileHover="hover" animate="rest">
             <motion.span className="flex items-center" variants={animations}>
-              <ChevronLeftIcon className="inline-block mt-px h-5 w-5 text-gray-500 group-hover:text-indigo-500" />
+              <ChevronLeftIcon className="mt-px inline-block h-5 w-5 text-gray-500 group-hover:text-indigo-500" />
             </motion.span>
             <motion.span>Back</motion.span>
           </motion.span>

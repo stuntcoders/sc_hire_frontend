@@ -8,21 +8,21 @@ export default function Radio({ index, animations }) {
   const [questionList, addQuestion, removeQuestion] = useQuestionList()
 
   return (
-    <fieldset className="space-y-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-b">
+    <fieldset className="space-y-4 rounded-b bg-gray-50 p-4 dark:bg-gray-800">
       <div className="flex items-start">
-        <div className="flex items-center h-5">
+        <div className="flex h-5 items-center">
           <input
             id={`radio-${index}-0`}
             name={`radio-${index}`}
             type="radio"
-            className="mt-1.5 dark:bg-gray-700 focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 dark:border-none"
+            className="mt-1.5 h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-none dark:bg-gray-700"
           />
         </div>
-        <div className="w-full ml-4 border-b border-gray-300 dark:border-gray-600 focus-within:border-indigo-600">
+        <div className="ml-4 w-full border-b border-gray-300 focus-within:border-indigo-600 dark:border-gray-600">
           <input
             id={`radio-input-${index}-0`}
             type="text"
-            className="inline-block w-full h-6 border-0 border-b border-transparent dark:text-white bg-gray-50 dark:bg-gray-800 placeholder:text-gray-300 dark:placeholder:text-gray-600 focus:border-indigo-600 focus:ring-0 sm:text-sm"
+            className="inline-block h-6 w-full border-0 border-b border-transparent bg-gray-50 placeholder:text-gray-300 focus:border-indigo-600 focus:ring-0 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-600 sm:text-sm"
             placeholder="Radio option 1"
           />
         </div>
@@ -39,19 +39,19 @@ export default function Radio({ index, animations }) {
             exit="exit"
             transition={{ duration: 0.2 }}
           >
-            <div className="flex items-center h-5">
+            <div className="flex h-5 items-center">
               <input
                 id={question.radio}
                 name={`radio-${index}`}
                 type="radio"
-                className="mt-1 h-4 w-4 dark:bg-gray-700 text-indigo-600 border-gray-300 dark:border-none focus:ring-indigo-500"
+                className="mt-1 h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-none dark:bg-gray-700"
               />
             </div>
-            <div className="w-full ml-4 border-b border-gray-300 dark:border-gray-600 focus-within:border-indigo-600">
+            <div className="ml-4 w-full border-b border-gray-300 focus-within:border-indigo-600 dark:border-gray-600">
               <input
                 id={question.input}
                 type="text"
-                className="inline-block w-full h-6 border-0 border-b border-transparent dark:text-white bg-gray-50 dark:bg-gray-800 placeholder:text-gray-300 dark:placeholder:text-gray-600 focus:border-indigo-600 focus:ring-0 sm:text-sm"
+                className="inline-block h-6 w-full border-0 border-b border-transparent bg-gray-50 placeholder:text-gray-300 focus:border-indigo-600 focus:ring-0 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-600 sm:text-sm"
                 placeholder={`Radio option ${question_index + 2}`}
               />
             </div>

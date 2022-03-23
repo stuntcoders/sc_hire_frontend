@@ -15,19 +15,19 @@ const animations = {
 export default function Stats() {
   return (
     <>
-      <div className="relative p-6 pt-1 z-10 overflow-hidden">
-        <dl className="relative mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3 z-10">
+      <div className="relative z-10 overflow-hidden p-6 pt-1">
+        <dl className="relative z-10 mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
           {stats.map(item => (
             <motion.div
               key={item.name}
-              className="px-4 py-5 bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden sm:p-6"
+              className="overflow-hidden rounded-lg bg-white px-4 py-5 shadow dark:bg-gray-800 sm:p-6"
               variants={animations}
               initial="initial"
               animate="animate"
               exit="exit"
               transition={{ duration: 0.6 }}
             >
-              <dt className="text-sm font-medium text-gray-500 dark:text-white truncate">{item.name}</dt>
+              <dt className="truncate text-sm font-medium text-gray-500 dark:text-white">{item.name}</dt>
               <dd className="mt-1 text-3xl font-semibold text-gray-900 dark:text-gray-300">{item.stat}</dd>
             </motion.div>
           ))}
