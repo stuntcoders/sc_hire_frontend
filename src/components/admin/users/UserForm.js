@@ -5,14 +5,16 @@ export default function UserForm({ user }) {
   return (
     <AnimatedPage>
       <div className={`relative bg-white dark:bg-gray-800 shadow mx-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10 overflow-hidden ${user.id ? "mt-1" : "mt-4"}`}>
-        {user.id && <div className="absolute -top-10 -left-3 w-1/3 h-screen md:bg-indigo-600 -rotate-[18deg]"></div>}
+        {user.id && (
+          <div className="absolute -top-[28rem] md:-top-10 right-0 md:-left-3 w-1/3 h-screen bg-indigo-600 md:dark:bg-gray-600 -rotate-[48deg] md:-rotate-[18deg]"></div>
+        )}
 
         <div className="relative md:grid md:grid-cols-3 md:gap-6 z-10">
           <div className="md:col-span-1">
-            <h3 className={`text-lg font-medium leading-6 ${user.id ? "md:text-white" : "text-gray-900 dark:text-white"}`}>
+            <h3 className={`text-lg font-medium leading-6 ${user.id ? "md:text-white dark:text-white" : "text-gray-900 dark:text-white"}`}>
               {user.id ? "Edit" : "Create"} User
             </h3>
-            {user.id && <p className="mt-1 text-sm md:text-white">{user.role}</p>}
+            {user.id && <p className="mt-1 text-sm md:text-white dark:text-white">{user.role}</p>}
           </div>
           <div className="mt-5 md:mt-0 md:col-span-2">
             <form action="#" method="POST">
