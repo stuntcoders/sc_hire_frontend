@@ -27,7 +27,7 @@ export default function Review({ review }) {
             <div className="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
               <div className="truncate">
                 <div className="flex">
-                  <p className="text-sm font-medium text-indigo-600 dark:text-indigo-500 truncate">{review.id}</p>
+                  <p className="text-sm font-medium text-indigo-600 dark:text-indigo-500 truncate">{review.user.id}</p>
                 </div>
                 <div className="mt-2 flex">
                   <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">

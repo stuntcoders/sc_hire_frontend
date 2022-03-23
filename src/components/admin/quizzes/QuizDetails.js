@@ -4,7 +4,7 @@ import Back from "../shared/Back"
 
 import QuizForm from "./QuizForm"
 
-import { quiz } from "../dummyData"
+import { quizzes } from "../dummyData"
 
 export default function QuizDetails() {
   const { id } = useParams()
@@ -13,7 +13,7 @@ export default function QuizDetails() {
     <>
       <Back path="/admin/quizzes" />
 
-      <QuizForm quiz={{ ...quiz, id: id }} />
+      <QuizForm quiz={{ ...quizzes[0], id: id }} />
     </>
   )
 }
