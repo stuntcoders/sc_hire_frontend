@@ -8,6 +8,12 @@ import { CollectionIcon, ClockIcon } from "@heroicons/react/outline"
 
 import Question from "./Question"
 
+const animations = {
+  initial: { opacity: 0, x: -80 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: -20 },
+}
+
 export default function QuizForm({ quiz }) {
   const [questionList, addQuestion, removeQuestion] = useQuestionList()
   const [selectedOption, setSelectedOption] = useState("checkbox")
@@ -17,7 +23,13 @@ export default function QuizForm({ quiz }) {
       <section className="relative block pt-1 pb-4 bg-gray-50 dark:bg-gray-700 rounded overflow-hidden">
         <div className="absolute top-0 -right-96 w-screen h-screen bg-indigo-500 -rotate-45"></div>
 
-        <div className="relative bg-white dark:bg-gray-800 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10">
+        <motion.div
+          className="relative bg-white dark:bg-gray-800 shadow mx-4 mt-4 px-4 py-5 sm:rounded-lg sm:p-6 z-10"
+          variants={animations}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ duration: 0.6 }}>
           <div className="md:grid md:grid-cols-3 md:gap-6">
             <div className="md:col-span-1">
               <h3 className="text-lg font-medium leading-6 text-gray-900 dark:text-white">{quiz.id ? "Edit" : "Create"} Quiz</h3>
@@ -113,7 +125,7 @@ export default function QuizForm({ quiz }) {
               </form>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </AnimatedPage>
   )
