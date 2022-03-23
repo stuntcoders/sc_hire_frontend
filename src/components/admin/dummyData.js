@@ -46,6 +46,12 @@ export const reviews = [
       last_name: "Smith",
       email: "jane_smith@fake.com",
     },
+    quiz: {
+      id: 1,
+      title: "Front-end General Knowledge",
+      duration: "45",
+      questions: [{ id: 1 }, { id: 2 }],
+    },
   },
   {
     id: 2,
