@@ -9,10 +9,10 @@ export default function NotFound() {
         <main className="flex-grow flex flex-col bg-white dark:bg-gray-800">
           <div className="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">
             <div className="flex-shrink-0 pt-10 sm:pt-16">
-              <a href="/" className="inline-flex">
+              <Link to={{ pathname: "/" }} className="inline-flex">
                 <span className="sr-only">Stuntcoders</span>
                 <img className="h-12 w-auto rounded" src={logo} alt="" />
-              </a>
+              </Link>
             </div>
             <div className="flex-shrink-0 my-auto py-16 sm:py-32">
               <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-500 uppercase tracking-wide">404 error</p>
