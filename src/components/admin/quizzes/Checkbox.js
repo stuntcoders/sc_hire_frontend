@@ -15,7 +15,7 @@ export default function Checkbox({ index, animations }) {
             id={`checkbox-${index}-0`}
             name={`checkbox-${index}-0`}
             type="checkbox"
-            className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-none dark:bg-gray-700"
+            className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700"
           />
         </div>
         <div className="ml-4 w-full border-b border-gray-300 focus-within:border-indigo-600 dark:border-gray-600">
@@ -44,7 +44,7 @@ export default function Checkbox({ index, animations }) {
                 id={question.checkbox}
                 name={question.checkbox}
                 type="checkbox"
-                className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-none dark:bg-gray-700"
+                className="mt-1 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700"
               />
             </div>
             <div className="ml-4 w-full border-b border-gray-300 focus-within:border-indigo-600 dark:border-gray-600">

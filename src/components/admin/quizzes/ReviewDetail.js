@@ -120,7 +120,7 @@ export default function ReviewDetails() {
                       className={`relative inline-flex items-center rounded-l-md border px-4 py-2 text-sm font-medium text-gray-700 focus:z-10 focus:outline-none dark:text-white ${
                         reviews[2].status === "passed"
                           ? "border-green-300 bg-green-300 text-white"
-                          : "border-gray-300 bg-white hover:bg-gray-50 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:hover:bg-gray-600"
+                          : "border-gray-300 bg-white hover:bg-gray-50 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700 dark:hover:bg-gray-600"
                       }`}
                     >
                       Pass
@@ -130,7 +130,7 @@ export default function ReviewDetails() {
                       className={`relative -ml-px inline-flex items-center border px-4 py-2 text-sm font-medium text-gray-700 focus:z-10 focus:outline-none dark:text-white ${
                         reviews[2].status === "unrevised"
                           ? "border-indigo-700 bg-indigo-700 text-white"
-                          : "border-gray-300 bg-white hover:bg-gray-50 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:hover:bg-gray-600"
+                          : "border-gray-300 bg-white hover:bg-gray-50 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700 dark:hover:bg-gray-600"
                       }`}
                     >
                       Unrevised
@@ -140,7 +140,7 @@ export default function ReviewDetails() {
                       className={`relative -ml-px inline-flex items-center rounded-r-md border px-4 py-2 text-sm font-medium text-gray-700 focus:z-10 focus:outline-none dark:text-white ${
                         reviews[2].status === "failed"
                           ? "cursor-default border-gray-300 bg-gray-300 text-white"
-                          : "border-gray-300 bg-white hover:bg-gray-50 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:hover:bg-gray-600"
+                          : "border-gray-300 bg-white hover:bg-gray-50 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700 dark:hover:bg-gray-600"
                       }`}
                     >
                       Fail

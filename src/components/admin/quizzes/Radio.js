@@ -15,7 +15,7 @@ export default function Radio({ index, animations }) {
             id={`radio-${index}-0`}
             name={`radio-${index}`}
             type="radio"
-            className="mt-1.5 h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-none dark:bg-gray-700"
+            className="mt-1.5 h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700"
           />
         </div>
         <div className="ml-4 w-full border-b border-gray-300 focus-within:border-indigo-600 dark:border-gray-600">
@@ -44,7 +44,7 @@ export default function Radio({ index, animations }) {
                 id={question.radio}
                 name={`radio-${index}`}
                 type="radio"
-                className="mt-1 h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-none dark:bg-gray-700"
+                className="mt-1 h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700"
               />
             </div>
             <div className="ml-4 w-full border-b border-gray-300 focus-within:border-indigo-600 dark:border-gray-600">

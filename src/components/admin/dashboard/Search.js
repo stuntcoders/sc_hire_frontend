@@ -20,7 +20,7 @@ export default function Search() {
               type="email"
               name="email"
               id="email"
-              className="block w-full rounded-none rounded-l-md border-gray-300 pl-10 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-none dark:bg-gray-800 dark:text-white sm:text-sm"
+              className="block w-full rounded-none rounded-l-md border-gray-300 pl-10 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-800 dark:text-white sm:text-sm"
             />
           </div>
           <button

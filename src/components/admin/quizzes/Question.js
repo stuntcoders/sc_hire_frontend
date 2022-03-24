@@ -65,7 +65,7 @@ export default function Question({ type, index, removeQuestion }) {
           name={`title-${index}`}
           id={`title-${index}`}
           autoComplete="off"
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:text-white sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700 dark:text-white sm:text-sm"
         />
         {instructions(type)}
       </motion.div>

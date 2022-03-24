@@ -58,7 +58,7 @@ export default function QuizForm({ quiz }) {
                       name={`title-${quiz.id}`}
                       id={`title-${quiz.id}`}
                       autoComplete="off"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:text-white sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700 dark:text-white sm:text-sm"
                     />
                   </div>
 
@@ -73,7 +73,7 @@ export default function QuizForm({ quiz }) {
                       autoComplete="off"
                       min={0}
                       step={5}
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:text-white sm:text-sm"
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700 dark:text-white sm:text-sm"
                     />
                   </div>
 
@@ -89,7 +89,7 @@ export default function QuizForm({ quiz }) {
                           id={`quiz-${quiz.id}`}
                           name={`quiz-${quiz.id}`}
                           autoComplete="off"
-                          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-none dark:bg-gray-700 dark:text-white sm:text-sm"
+                          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-transparent dark:bg-gray-700 dark:text-white sm:text-sm"
                         >
                           <option value="checkbox">Checkbox</option>
                           <option value="code">Code</option>
